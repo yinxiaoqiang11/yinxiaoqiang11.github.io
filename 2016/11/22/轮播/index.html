@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>轮播 | 殷孝强</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="基于jquery实现的全屏轮播在头部引入jquery.js
+1&amp;lt;script src=&amp;quot;http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+样式表
+12345678910111213141516171819202122232425262728293031&amp;lt;style&amp;gt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="轮播">
+<meta property="og:url" content="http://yoursite.com/2016/11/22/轮播/index.html">
+<meta property="og:site_name" content="殷孝强">
+<meta property="og:description" content="基于jquery实现的全屏轮播在头部引入jquery.js
+1&amp;lt;script src=&amp;quot;http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+样式表
+12345678910111213141516171819202122232425262728293031&amp;lt;style&amp;gt;">
+<meta property="og:updated_time" content="2016-11-26T04:05:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="轮播">
+<meta name="twitter:description" content="基于jquery实现的全屏轮播在头部引入jquery.js
+1&amp;lt;script src=&amp;quot;http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+样式表
+12345678910111213141516171819202122232425262728293031&amp;lt;style&amp;gt;">
+  
+    <link rel="alternative" href="/atom.xml" title="殷孝强" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://h.hiphotos.baidu.com/image/pic/item/8694a4c27d1ed21b61797af2ae6eddc451da3f70.jpg">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="http://img3.imgtn.bdimg.com/it/u=1920956503,1400511548&amp;fm=21&amp;gp=0.jpg" class="js-avatar show">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Xiaoqiang Yin</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">xiao Yin</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">我的主页</a></li>
+	        
+				<li><a href="/">我的随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/yinxiaoqiang11" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Xiaoqiang Yin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="http://img3.imgtn.bdimg.com/it/u=1920956503,1400511548&amp;fm=21&amp;gp=0.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Xiaoqiang Yin</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">xiao Yin</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">我的主页</a></li>
+		        
+					<li><a href="/">我的随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/yinxiaoqiang11" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-轮播" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      轮播
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="基于jquery实现的全屏轮播"><a href="#基于jquery实现的全屏轮播" class="headerlink" title="基于jquery实现的全屏轮播"></a>基于jquery实现的全屏轮播</h3><p>在头部引入jquery.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>样式表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">        * &#123;</div><div class="line">        	margin: 0;</div><div class="line">        	border: 0;</div><div class="line">        	padding: 0;</div><div class="line">        &#125;</div><div class="line">        ul, li &#123;</div><div class="line">        	list-style: none;</div><div class="line">        &#125;</div><div class="line">        html, body &#123;</div><div class="line">        	background-color: #808080;</div><div class="line">        &#125;</div><div class="line">        html, body, .banner, .banner li &#123;</div><div class="line">        width: 100%;</div><div class="line">        height: 100%;</div><div class="line">        min-width: 800px;</div><div class="line">        min-height: 600px; /; /*这里的最小高宽是为了防止窗口太小图片变形*/</div><div class="line">       &#125;</div><div class="line">       .banner &#123;</div><div class="line">       	position: relative;</div><div class="line">       	overflow: hidden;</div><div class="line">       &#125;</div><div class="line">      .banner li &#123;</div><div class="line">      		position: absolute;</div><div class="line">      		top: 0;</div><div class="line">      		left: 0;</div><div class="line">      	&#125;</div><div class="line">      .banner li &#123;</div><div class="line">      	display: none;</div><div class="line">      &#125;</div><div class="line">  &lt;/style&gt;</div></pre></td></tr></table></figure>
+<p>html</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;ul class=&quot;banner&quot;&gt;</div><div class="line">        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/1.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;</div><div class="line">        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/2.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;</div><div class="line">        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/3.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;</div><div class="line">        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;image/4.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;</div><div class="line">    &lt;/ul&gt;</div></pre></td></tr></table></figure>
+<p>JS部分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">var Fpic = $(&quot;.banner li&quot;);</div><div class="line">        var Lpic = Fpic.find(&quot;img&quot;);</div><div class="line"></div><div class="line">      //图片自适应浏览器窗口大小</div><div class="line">        var winW, winH;</div><div class="line">        function findSize() &#123;</div><div class="line">            if (window.innerHeight &amp;&amp; window.innerWidth) &#123;</div><div class="line">                winW = window.innerWidth;</div><div class="line">                winH = window.innerHeight;</div><div class="line">            &#125;</div><div class="line">            if (document.documentElement.clientHeight &amp;&amp; document.documentElement.clientWidth) &#123;</div><div class="line">                winW = document.documentElement.clientWidth;</div><div class="line">                winH = document.documentElement.clientHeight;</div><div class="line">            &#125;</div><div class="line">            if (document.body.clientHeight &amp;&amp; document.body.clientWidth) &#123;</div><div class="line">                winW = document.body.clientWidth;</div><div class="line">                winH = document.body.clientHeight;</div><div class="line">            &#125;</div><div class="line">            Lpic.css(&#123; &quot;width&quot;: winW, &quot;height&quot;: winH &#125;);</div><div class="line">        &#125;</div><div class="line">        window.onload = findSize;</div><div class="line">        window.onresize = window_resize;</div><div class="line">        var resizeTimeoutId;</div><div class="line">        function window_resize(e) &#123;</div><div class="line">            window.clearTimeout(resizeTimeoutId);</div><div class="line">            resizeTimeoutId = window.setTimeout(&apos;findSize();&apos;, 100);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        //图片轮播动画</div><div class="line">        var FpicNum = Fpic.length;</div><div class="line">        Fpic.eq(0).fadeIn();</div><div class="line">        var now = 0;</div><div class="line">        setInterval(function () &#123;</div><div class="line"></div><div class="line">            if (now &gt;= FpicNum - 1) &#123;</div><div class="line">                Fpic.eq(FpicNum - 1).stop().fadeOut(500);</div><div class="line">                now = -1;</div><div class="line">            &#125;</div><div class="line">            Fpic.eq(now).stop().fadeOut(500);</div><div class="line">            now++;</div><div class="line">            Fpic.eq(now).stop().fadeIn(500);</div><div class="line">        &#125;, 3000);</div></pre></td></tr></table></figure>
+<p>这个效果感觉还可以啊，如果觉得喜欢的话，记得点赞哦</p>
+<h4 id="全屏轮播之fullpage插件"><a href="#全屏轮播之fullpage插件" class="headerlink" title="全屏轮播之fullpage插件"></a>全屏轮播之fullpage插件</h4><p>fullPage.js 是一个基于 jQuery 的插件，它能够很方便、很轻松的制作出全屏网站，主要功能有：</p>
+<p>支持鼠标滚动<br>支持前进后退和键盘控制<br>多个回调函数<br>支持手机、平板触摸事件<br>支持 CSS3 动画<br>支持窗口缩放<br>窗口缩放时自动调整<br>可设置滚动宽度、背景颜色、滚动速度、循环选项、回调、文本对齐方式等等</p>
+<h4 id="第一步：头部引入"><a href="#第一步：头部引入" class="headerlink" title="第一步：头部引入"></a>第一步：头部引入</h4><p>我个人是去<a href="https://cdnjs.com/" target="_blank" rel="external">cdnjs</a>官网，在线引入，你们也可以下载到本地,操作很简单，只需在官网搜索你想要的东西即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.css&quot;&gt;</div></pre></td></tr></table></figure>
+<h4 id="第二部：尾部引入"><a href="#第二部：尾部引入" class="headerlink" title="第二部：尾部引入"></a>第二部：尾部引入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h4 id="第三部：编写主体部分"><a href="#第三部：编写主体部分" class="headerlink" title="第三部：编写主体部分"></a>第三部：编写主体部分</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;fullpage&quot;&gt;</div><div class="line">    &lt;div class=&quot;section section1 active&quot;&gt;</div><div class="line">        &lt;div class=&quot;slide&quot;&gt;1&lt;/div&gt;</div><div class="line">        &lt;div class=&quot;slide&quot;&gt;2&lt;/div&gt;</div><div class="line">        &lt;div class=&quot;slide&quot;&gt;3&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<h4 id="第四部：写自己的js"><a href="#第四部：写自己的js" class="headerlink" title="第四部：写自己的js"></a>第四部：写自己的js</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">     $(document).ready(function () &#123;</div><div class="line">        $(&quot;#fullpage&quot;).fullpage(&#123;</div><div class="line">            //可以为每个section项分配一个颜色</div><div class="line">            sectionsColor:[&quot;red&quot;,&quot;green&quot;,&quot;blue&quot;,&quot;yellow&quot;],</div><div class="line">            //控制箭头是否消失</div><div class="line">            controlArrows:true,</div><div class="line">            verticalCentered:false,</div><div class="line">            //滑动滚动速度</div><div class="line">            scrollingSpeed:2000,</div><div class="line">            //锚链接,可以快速定位到某个页面</div><div class="line">            anchors:[&quot;page1&quot;,&quot;page2&quot;,&quot;page3&quot;,&quot;page4&quot;],</div><div class="line">            //滚动到最顶部后是否连续滚动到地步</div><div class="line">            loopTop:true,</div><div class="line">            //滚动到最底部后是否连续滚动到顶步</div><div class="line">            loopBottom:true,</div><div class="line">            //横向slide幻灯片是否循环滚动</div><div class="line">//            loopHorizontal:false,</div><div class="line">            //如果设为false,将会使用浏览器自带的滚动条,不会按页滚动</div><div class="line">            autoScrolling:true,</div><div class="line">            //控制小圆点是否出现</div><div class="line">            navigation:true,</div><div class="line">            navigationPosition:&quot;right&quot;,</div><div class="line">            navigationTooltips:[&quot;page1&quot;,&quot;page2&quot;,&quot;page3&quot;,&quot;page4&quot;],</div><div class="line">            //是否显示当前页面的导航信息</div><div class="line">            showActiveTooltip:true,</div><div class="line">    //是否显示横向幻灯片的导航</div><div class="line">            slidesNavigation:true,</div><div class="line">        &#125;)</div><div class="line">    &#125;)</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>要想知道更多信息，请参考<a href="http://www.uedsc.com/fullpage.html" target="_blank" rel="external">文档</a></p>
+<h4 id="全屏轮播之bootstrap"><a href="#全屏轮播之bootstrap" class="headerlink" title="全屏轮播之bootstrap"></a>全屏轮播之bootstrap</h4><p>我们可以在线上引入以下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 新 Bootstrap 核心 CSS 文件 --&gt;</div><div class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css&quot;&gt;</div><div class="line"></div><div class="line">&lt;!-- 可选的Bootstrap主题文件（一般不用引入） --&gt;</div><div class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css&quot;&gt;</div><div class="line"></div><div class="line">&lt;!-- jQuery文件。务必在bootstrap.min.js 之前引入 --&gt;</div><div class="line">&lt;script src=&quot;http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js&quot;&gt;&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;!-- 最新的 Bootstrap 核心 JavaScript 文件 --&gt;</div><div class="line">&lt;script src=&quot;http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<h4 id="样式设置很简单"><a href="#样式设置很简单" class="headerlink" title="样式设置很简单"></a>样式设置很简单</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">html,body&#123;</div><div class="line">		width: 100%;</div><div class="line">		height:100%;</div><div class="line">	&#125;</div><div class="line">	.onepage,.container,#carousel-example-generic,.carousel-inner,.item&#123;</div><div class="line">		width: 100%;</div><div class="line">		height:100%;</div><div class="line">	&#125;</div><div class="line">	.carousel-caption&#123;</div><div class="line">		width:100%;</div><div class="line">		height:100%;</div><div class="line">		line-height: 100%;</div><div class="line">		background-color: red;</div><div class="line">		left:0;</div><div class="line">		right:0;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<p>话不多说直接上代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;onepage&quot;&gt;</div><div class="line">    &lt;div class=&quot;container&quot; id=&quot;myCarousel&quot;&gt;</div><div class="line">        &lt;div id=&quot;carousel-example-generic&quot; class=&quot;carousel slide&quot; data-ride=&quot;carousel&quot;&gt;</div><div class="line">    &lt;!-- Indicators --&gt;</div><div class="line">            &lt;ol class=&quot;carousel-indicators&quot;&gt;</div><div class="line">                &lt;li data-target=&quot;#carousel-example-generic&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/li&gt;</div><div class="line">                &lt;li data-target=&quot;#carousel-example-generic&quot; data-slide-to=&quot;1&quot;&gt;&lt;/li&gt;</div><div class="line">                &lt;li data-target=&quot;#carousel-example-generic&quot; data-slide-to=&quot;2&quot;&gt;&lt;/li&gt;</div><div class="line">            &lt;/ol&gt;</div><div class="line">            &lt;!-- Wrapper for slides --&gt;</div><div class="line">            &lt;div class=&quot;carousel-inner&quot; role=&quot;listbox&quot;&gt;</div><div class="line">                &lt;div class=&quot;item active img&quot;  &gt;</div><div class="line">                   &lt;!--  &lt;img src=&quot;img/4.jpg&quot;   &gt; --&gt;</div><div class="line">                    &lt;div class=&quot;carousel-caption&quot;&gt;</div><div class="line">                       the first</div><div class="line">                    &lt;/div&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">                &lt;div class=&quot;item img&quot;&gt;</div><div class="line">                    &lt;!-- &lt;img src=&quot;img/2.jpg&quot;&gt; --&gt;</div><div class="line">                    &lt;div class=&quot;carousel-caption&quot;&gt;</div><div class="line">                       syhdfh</div><div class="line">                    &lt;/div&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line">                &lt;div class=&quot;item img&quot;&gt;</div><div class="line">                    &lt;!-- &lt;img src=&quot;img/3.jpg&quot; &gt; --&gt;</div><div class="line">                    &lt;div class=&quot;carousel-caption&quot;&gt;</div><div class="line">                        syhdfh</div><div class="line">                    &lt;/div&gt;</div><div class="line">                &lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line">            &lt;/div&gt;</div><div class="line">    &lt;!-- Controls --&gt;</div><div class="line">            &lt;a class=&quot;left carousel-control&quot; href=&quot;#carousel-example-generic&quot; role=&quot;button&quot; data-slide=&quot;prev&quot;&gt;</div><div class="line">                &lt;span class=&quot;glyphicon glyphicon-chevron-left&quot;&gt;&lt;/span&gt;</div><div class="line">                &lt;span class=&quot;sr-only&quot;&gt;Previous&lt;/span&gt;</div><div class="line">            &lt;/a&gt;</div><div class="line">            &lt;a class=&quot;right carousel-control&quot; href=&quot;#carousel-example-generic&quot; role=&quot;button&quot; data-slide=&quot;next&quot;&gt;</div><div class="line">                &lt;span class=&quot;glyphicon glyphicon-chevron-right&quot;&gt;&lt;/span&gt;</div><div class="line">                &lt;span class=&quot;sr-only&quot;&gt;Next&lt;/span&gt;</div><div class="line">            &lt;/a&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>要实现更多效果请参考官方文档<a href="http://v3.bootcss.com/getting-started/" target="_blank" rel="external">bootstrap</a></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/11/22/轮播/" class="archive-article-date">
+  	<time datetime="2016-11-22T15:13:39.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-22</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/12/05/vue/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          vue
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/11/18/img加载/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">img加载</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="post-轮播" data-title="轮播" data-url="http://yoursite.com/2016/11/22/轮播/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"yinxiaoqiang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Xiaoqiang Yin
+    	</div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/js/" style="font-size: 10px;">js</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://3241746995.github.io/">王敏</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://wjydc.github.io/">魏娇</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://jasonellen.github.io/">张南南</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://zjflove.github.io/">章江锋</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://yaomengyyu.github.io/">刘家浩</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/litten/hexo-theme-yilia">litten</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;&lt;br&gt;我会继续努力&lt;br&gt;&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

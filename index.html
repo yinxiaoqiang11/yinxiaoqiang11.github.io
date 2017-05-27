@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>殷孝强</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="殷孝强">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="殷孝强">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="殷孝强">
+  
+    <link rel="alternative" href="/atom.xml" title="殷孝强" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://h.hiphotos.baidu.com/image/pic/item/8694a4c27d1ed21b61797af2ae6eddc451da3f70.jpg">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="http://img3.imgtn.bdimg.com/it/u=1920956503,1400511548&amp;fm=21&amp;gp=0.jpg" class="js-avatar show">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Xiaoqiang Yin</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">xiao Yin</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">我的主页</a></li>
+	        
+				<li><a href="/">我的随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/yinxiaoqiang11" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Xiaoqiang Yin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="http://img3.imgtn.bdimg.com/it/u=1920956503,1400511548&amp;fm=21&amp;gp=0.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Xiaoqiang Yin</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">xiao Yin</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">我的主页</a></li>
+		        
+					<li><a href="/">我的随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/yinxiaoqiang11" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        
+  
+    <article id="post-webpack" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/27/webpack/">webpack</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="安装webpack"><a href="#安装webpack" class="headerlink" title="安装webpack"></a>安装webpack</h3><p>了解更详细的信息请参考webpack官网<br>安装的前期是你已经安装了node.js和npm,启用终端通过命令,进入到你的项目目录，执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm init //生成package.json文件</div><div class="line">npm webpack install --save-dev</div></pre></td></tr></table></figure>
+<p>测试有没有成功：<br>新建个hello.js文件,里面随便写个函数，然后通过执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack hello.js hello-webpack.js // hello-webpack.js是打包后的文件</div></pre></td></tr></table></figure>
+<p>如果界面显示hash值和打包所用时间，就成功了。</p>
+<h4 id="webpack配置"><a href="#webpack配置" class="headerlink" title="webpack配置"></a>webpack配置</h4><p>经过本人使用，最重要的属于webpack配置了，我们可以手动建立一个webpack.config.js,也可以使用脚手架的方式。<br>步骤一.新建webpack.config.js<br>步骤二.进入该文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">module.exports=&#123;</div><div class="line">	entry: &quot;./main.js&quot;,   //项目入口文件，假设是main.js</div><div class="line">	output: &#123;</div><div class="line">		path:__dirname,		//输出文件路径</div><div class="line">		filename: &quot;bundle.js&quot; //输出文件名称，也或者可以使用占位符(name,hash,trunkhash)，filename:&quot;[name]-[ hash].js&quot;</div><div class="line">		publicPath: &quot;/js/&quot;</div><div class="line">	&#125;，</div><div class="line">	moudle:&#123;</div><div class="line">		loaders:[</div><div class="line">			&#123;</div><div class="line">				test:/\.css$/,</div><div class="line">				loader:&quot;style!css!importloaders=1!postcss&quot;,</div><div class="line">				exclude:/node_modules/,</div><div class="line">				include:__dirname</div><div class="line">			&#125;,</div><div class="line">			&#123;</div><div class="line">				test:/\.js$/,</div><div class="line">				loader:&quot;babel&quot;,</div><div class="line">				query:&#123;</div><div class="line">					presets:[&quot;es2015&quot;]</div><div class="line">				&#125;,</div><div class="line">				exclude:/node_modules/,//排除范围</div><div class="line">				inculde:   //处理范围</div><div class="line">			&#125;,</div><div class="line">			&#123;</div><div class="line">				test:/\.less/,</div><div class="line">				loader:&quot;style!css!postcss!less-loader&quot;</div><div class="line">			&#125;</div><div class="line">		]</div><div class="line">	&#125;,</div><div class="line">	plugins:&#123;</div><div class="line">		new htmlWebpackPlugin(&#123;</div><div class="line">			filename:&quot;index.html&quot;,</div><div class="line">			template:&quot;index.html&quot;,</div><div class="line">			inject:&quot;body&quot;</div><div class="line">		&#125;)</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<h4 id="安装babel及相关依赖"><a href="#安装babel及相关依赖" class="headerlink" title="安装babel及相关依赖"></a>安装babel及相关依赖</h4><p>项目目录运行如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install –save-dev babel-loader babel-core</div><div class="line">npm install –save-dev babel-preset-latest</div><div class="line">npm install style-loader css-loader –save-dev</div><div class="line">npm install webpack-dev-server –save-dev</div></pre></td></tr></table></figure></p>
+<h4 id="处理sass-less文件"><a href="#处理sass-less文件" class="headerlink" title="处理sass,less文件"></a>处理sass,less文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm i less-loader –save-dev</div><div class="line">npm i postcss-loader –save-dev</div></pre></td></tr></table></figure>
+<h4 id="处理html文件"><a href="#处理html文件" class="headerlink" title="处理html文件"></a>处理html文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i html-loader –save-dev</div></pre></td></tr></table></figure>
+<h4 id="热加载"><a href="#热加载" class="headerlink" title="热加载"></a>热加载</h4><p>在package.json文件的scripts里面加入以下代码,可以看到你项目的进程，代码颜色，模块，打包理由</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">“webpack”:&quot;webpack --config webpack-config.js --progress --display-moudle --colors --diplay-reason&quot; </div><div class="line">&quot;dev&quot;: &quot;webpack-dev-server --devtool eval --progress --colors --content-base build&quot;</div></pre></td></tr></table></figure>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/05/27/webpack/" class="archive-article-date">
+  	<time datetime="2017-05-27T06:12:57.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-05-27</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="post-webpack" data-title="webpack" data-url="undefined"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"yinxiaoqiang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+  
+    <article id="post-跨域方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/03/跨域方法/">跨域方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="jsonp实现跨域"><a href="#jsonp实现跨域" class="headerlink" title="jsonp实现跨域"></a>jsonp实现跨域</h3><p>在js中，我们直接用XMLHttpRequest请求不同域上的数据时，是不可以的。但是，在页面上引入不同域上的js脚本文件却是可以的，jsonp正是利用这个特性来实现的。<br>比如，有个a.html页面，它里面的代码需要利用ajax获取一个不同域上的json数据，假设这个json数据地址是<a href="http://example.com/data.php,那么a.html中的代码就可以这样：" target="_blank" rel="external">http://example.com/data.php,那么a.html中的代码就可以这样：</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">	function mydata (jsondata) &#123;</div><div class="line">		//处理获得的数据</div><div class="line">	&#125;</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;http://example.com/data.php?callback=mydata&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>在data.php中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;?php </div><div class="line">	$callback=$_GET[&apos;callback&apos;];</div><div class="line">	$data=&quot;我们所需的数据&quot;；</div><div class="line">	echo $callback.&apos;(&apos;.json_encode($data).&apos;)&apos;;</div><div class="line"> ?&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="document-domain"><a href="#document-domain" class="headerlink" title="document.domain"></a>document.domain</h3><p>浏览器都有一个同源策略，其限制之一就是第一种方法中我们说的不能通过ajax的方法去请求不同源中的文档。 它的第二个限制是浏览器中不同域的框架之间是不能进行js的交互操作的。有一点需要说明，不同的框架之间（父子或同辈），是能够获取到彼此的window对象的，但蛋疼的是你却不能使用获取到的window对象的属性和方法(html5中的postMessage方法是一个例外，还有些浏览器比如ie6也可以使用top、parent等少数几个属性)，总之，你可以当做是只能获取到一个几乎无用的window对象。比如，有一个页面，它的地址是<a href="http://www.example.com/a.html" target="_blank" rel="external">http://www.example.com/a.html</a>  ， 在这个页面里面有一个iframe，它的src是<a href="http://example.com/b.html" target="_blank" rel="external">http://example.com/b.html</a>, 很显然，这个页面与它里面的iframe框架是不同域的，所以我们是无法通过在页面中书写js代码来获取iframe中的东西的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">function onload()&#123;</div><div class="line">	var iframe=document.getElementById(&quot;iframem&quot;);</div><div class="line">	var win=iframe.contentWindow;//获取到iframe的window对象，但是window的属性和方法不能用</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">&lt;/script&gt;</div><div class="line">&lt;iframe src=&quot;http://www.example.com/a.html&quot; id=&quot;iframem&quot; onload=&quot;onload()&quot;&gt;&lt;/iframe&gt;</div></pre></td></tr></table></figure>
+<p>这个时候，document.domain就可以派上用场了，我们只要把<a href="http://www.example.com/a.html" target="_blank" rel="external">http://www.example.com/a.html</a> 和 <a href="http://example.com/b.html这两个页面的document.domain都设成相同的域名就可以了。但要注意的是，document.domain的设置是有限制的，我们只能把document.domain设置成自身或更高一级的父域，且主域必须相同。例如：a.b.example.com" target="_blank" rel="external">http://example.com/b.html这两个页面的document.domain都设成相同的域名就可以了。但要注意的是，document.domain的设置是有限制的，我们只能把document.domain设置成自身或更高一级的父域，且主域必须相同。例如：a.b.example.com</a> 中某个文档的document.domain 可以设成a.b.example.com、b.example.com 、example.com中的任意一个，但是不可以设成 c.a.b.example.com,因为这是当前域的子域，也不可以设成baidu.com,因为主域已经不相同了。</p>
+<p>在页面 <a href="http://www.example.com/a.html" target="_blank" rel="external">http://www.example.com/a.html</a> 中设置document.domain:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;iframe src=&quot;http://www.example.com/a.html&quot; id=&quot;iframem&quot; onload=&quot;onload()&quot;&gt;&lt;/iframe&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">document.main=&apos;example.com&apos;;//设置成主域</div><div class="line">function test()&#123;</div><div class="line">	alert(document.getElementById(&quot;iframem&quot;).contentWindow);</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>在页面 <a href="http://example.com/b.html" target="_blank" rel="external">http://example.com/b.html</a> 中也设置document.domain，而且这也是必须的，虽然这个文档的domain就是example.com,但是还是必须显示的设置document.domain的值：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">document.domain=&quot;example.com&quot;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>这样我们就可以通过js访问到iframe中的各种属性和对象了。</p>
+<p>不过如果你想在<a href="http://www.example.com/a.html" target="_blank" rel="external">http://www.example.com/a.html</a> 页面中通过ajax直接请求<a href="http://example.com/b.html" target="_blank" rel="external">http://example.com/b.html</a> 页面，即使你设置了相同的document.domain也还是不行的，所以修改document.domain的方法只适用于不同子域的框架间的交互。如果你想通过ajax的方法去与不同子域的页面交互，除了使用jsonp的方法外，还可以用一个隐藏的iframe来做一个代理。原理就是让这个iframe载入一个与你想要通过ajax获取数据的目标页面处在相同的域的页面，所以这个iframe中的页面是可以正常使用ajax去获取你要的数据的，然后就是通过我们刚刚讲得修改document.domain的方法，让我们能通过js完全控制这个iframe，这样我们就可以让iframe去发送ajax请求，然后收到的数据我们也可以获得了。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/03/03/跨域方法/" class="archive-article-date">
+  	<time datetime="2017-03-03T04:48:55.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-03-03</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="post-跨域方法" data-title="跨域方法" data-url="undefined"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"yinxiaoqiang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+  
+    <article id="post-简单的查询" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/14/简单的查询/">简单的查询</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天闲来无事做了个这个效果,虽然样式有点丑。。。。。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">	&lt;title&gt;Document&lt;/title&gt;</div><div class="line">	&lt;style&gt;</div><div class="line">		*&#123;</div><div class="line">			margin:0;</div><div class="line">			padding:0;</div><div class="line">		&#125;</div><div class="line">		#warp&#123;</div><div class="line">			width:215px;</div><div class="line">			height:200px;</div><div class="line">			border:1px solid #666;</div><div class="line">			position: relative;</div><div class="line">			margin-top:10px;</div><div class="line">			overflow: auto;</div><div class="line">		&#125;</div><div class="line">		ul&#123;</div><div class="line">			list-style: none;</div><div class="line">		&#125;</div><div class="line">		li&#123;</div><div class="line">			width:50px;</div><div class="line">			height:30px;</div><div class="line">			float:left;</div><div class="line">			margin:5px 2px 5px 11px;</div><div class="line">			background-color: #cfc;</div><div class="line">			text-align: center;</div><div class="line">			line-height: 30px;</div><div class="line">		&#125;</div><div class="line">		#tishi&#123;</div><div class="line">			width:100%;</div><div class="line">			height:0;</div><div class="line">			overflow: hidden;</div><div class="line">		&#125;</div><div class="line">		.yes1&#123;</div><div class="line">			background-color: red;</div><div class="line">		&#125;</div><div class="line">		.yes2&#123;</div><div class="line">			background-color: yellow;</div><div class="line">		&#125;</div><div class="line">		.yes3&#123;</div><div class="line">			background-color: purple;</div><div class="line">		&#125;</div><div class="line">		.yes4&#123;</div><div class="line">			background-color: gold;</div><div class="line">		&#125;</div><div class="line">		.yes5&#123;</div><div class="line">			background-color:green;</div><div class="line">		&#125;</div><div class="line">	&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;input type=&quot;text&quot; placeholder=&quot;请输入要查询的内容&quot;&gt;</div><div class="line">	&lt;button&gt;查询&lt;/button&gt;</div><div class="line">	&lt;div id=&quot;warp&quot;&gt;</div><div class="line">		&lt;div id=&quot;tishi&quot;&gt;输入的内容有误，请确认&lt;/div&gt;</div><div class="line">		&lt;ul&gt;</div><div class="line">			&lt;li&gt;1&lt;/li&gt;</div><div class="line">			&lt;li&gt;2&lt;/li&gt;</div><div class="line">			&lt;li&gt;3&lt;/li&gt;</div><div class="line">			&lt;li&gt;4&lt;/li&gt;</div><div class="line">			&lt;li&gt;5&lt;/li&gt;</div><div class="line">			&lt;li&gt;6&lt;/li&gt;</div><div class="line">			&lt;li&gt;7&lt;/li&gt;</div><div class="line">			&lt;li&gt;8&lt;/li&gt;</div><div class="line">			&lt;li&gt;9&lt;/li&gt;</div><div class="line">			&lt;li&gt;10&lt;/li&gt;</div><div class="line">			&lt;li&gt;11&lt;/li&gt;</div><div class="line">			&lt;li&gt;12&lt;/li&gt;</div><div class="line">			&lt;li&gt;13&lt;/li&gt;</div><div class="line">			&lt;li&gt;14&lt;/li&gt;</div><div class="line">			&lt;li&gt;15&lt;/li&gt;</div><div class="line">			&lt;li&gt;16&lt;/li&gt;</div><div class="line">			&lt;li&gt;17&lt;/li&gt;</div><div class="line">			&lt;li&gt;18&lt;/li&gt;</div><div class="line">			&lt;li&gt;19&lt;/li&gt;</div><div class="line">			&lt;li&gt;20&lt;/li&gt;</div><div class="line">			&lt;li&gt;21&lt;/li&gt;</div><div class="line">			&lt;li&gt;22&lt;/li&gt;</div><div class="line">			&lt;li&gt;23&lt;/li&gt;</div><div class="line">			&lt;li&gt;24&lt;/li&gt;</div><div class="line">			&lt;li&gt;25&lt;/li&gt;</div><div class="line">			&lt;li&gt;26&lt;/li&gt;</div><div class="line">			&lt;li&gt;27&lt;/li&gt;</div><div class="line">			&lt;li&gt;28&lt;/li&gt;</div><div class="line">			&lt;li&gt;29&lt;/li&gt;</div><div class="line">			&lt;li&gt;30&lt;/li&gt;</div><div class="line">		&lt;/ul&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">	&lt;script&gt;</div><div class="line">		var btn=document.querySelector(&quot;button&quot;);</div><div class="line">		var li=document.querySelectorAll(&quot;li&quot;);</div><div class="line">		var warp=document.querySelector(&quot;#warp&quot;);</div><div class="line">		var tishi=document.querySelector(&quot;#tishi&quot;);</div><div class="line"></div><div class="line">		btn.onclick=function()&#123;</div><div class="line">			init();</div><div class="line">			var txt=document.querySelector(&quot;input&quot;).value;</div><div class="line">			var i=0;</div><div class="line">			btn.timer=setInterval(function()&#123;</div><div class="line">				if(i==li.length)&#123;</div><div class="line">					clearInterval(btn.timer);</div><div class="line">					tishi.style.height=&quot;100%&quot;;</div><div class="line">					warp.scrollTop=0;</div><div class="line">				&#125;</div><div class="line">				if(li[i].innerHTML!=txt)&#123;</div><div class="line">					li[i].className=&quot;no&quot;;</div><div class="line">					warp.scrollTop=li[i].offsetTop*0.7;</div><div class="line">				&#125;</div><div class="line">				else&#123;</div><div class="line">					libg(li[i]);</div><div class="line">					clearInterval(btn.timer);</div><div class="line">				&#125;</div><div class="line">				i++;</div><div class="line">			&#125;,100);</div><div class="line">		&#125;</div><div class="line">		function libg(warp)&#123;</div><div class="line">			var bg=[&quot;yes1&quot;,&quot;yes2&quot;,&quot;yes3&quot;,&quot;yes4&quot;,&quot;yes5&quot;];</div><div class="line">			var i=0;</div><div class="line">			warp.timer=setInterval(function()&#123;</div><div class="line">				if(i==bg.length-1)&#123;</div><div class="line">					clearInterval(warp.timer);</div><div class="line">				&#125;</div><div class="line">				warp.className=bg[i];</div><div class="line">				i++;</div><div class="line">			&#125;,150)</div><div class="line">		&#125;</div><div class="line">		function init()&#123;</div><div class="line">			for(var i=0;i&lt;li.length;i++)&#123;</div><div class="line">				li[i].className=&quot;&quot;;</div><div class="line">			&#125;</div><div class="line">			tishi.style.height=0;</div><div class="line">		&#125;</div><div class="line">	&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/14/简单的查询/" class="archive-article-date">
+  	<time datetime="2016-12-14T08:30:38.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-14</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="post-简单的查询" data-title="简单的查询" data-url="undefined"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"yinxiaoqiang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+  
+    <article id="post-流动效果" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/14/流动效果/">流动效果</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这个效果关键是逻辑,<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">	&lt;title&gt;流动&lt;/title&gt;</div><div class="line">	&lt;style&gt;</div><div class="line">		div&#123;</div><div class="line">			width:50px;</div><div class="line">			height:50px;</div><div class="line">			position: absolute;</div><div class="line">			border-radius: 50%;</div><div class="line">			top:0px;</div><div class="line">			left:0px;</div><div class="line">		&#125;</div><div class="line">	&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;div style=&quot;background:red&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:yellow&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:purple&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:green&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:red&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:gold&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:red&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:yellow&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:purple&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:green&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:red&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:gold&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:red&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:yellow&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:purple&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:green&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:red&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:gold&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:red&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:yellow&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:purple&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:green&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:red&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;div style=&quot;background:gold&quot;&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	window.onload=function()&#123;</div><div class="line">		document.onmousemove=function(event)&#123;</div><div class="line">			var oEvent=event||window.event;</div><div class="line">			var div=document.querySelectorAll(&quot;div&quot;);</div><div class="line">			for(var i=div.length-1;i&gt;0;i--)&#123;</div><div class="line">				div[i].style.left=div[i-1].offsetLeft+&quot;px&quot;;</div><div class="line">				div[i].style.top=div[i-1].offsetTop+&quot;px&quot;;</div><div class="line"></div><div class="line">			&#125;;</div><div class="line">			div[0].style.left=oEvent.clientX+&quot;px&quot;;</div><div class="line">			div[0].style.top=oEvent.clientY+&quot;px&quot;;</div><div class="line"></div><div class="line">		&#125;</div><div class="line">		var timer=setInterval(function()&#123;</div><div class="line">			var div=document.querySelectorAll(&quot;div&quot;);</div><div class="line">			for(var i=div.length-1;i&gt;0;i--)&#123;</div><div class="line">				div[i].style.left=div[i-1].offsetLeft+&quot;px&quot;;</div><div class="line">				div[i].style.top=div[i-1].offsetTop+&quot;px&quot;;</div><div class="line"></div><div class="line">			&#125;</div><div class="line">		&#125;,40)</div><div class="line">	&#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/14/流动效果/" class="archive-article-date">
+  	<time datetime="2016-12-14T08:25:51.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-14</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="post-流动效果" data-title="流动效果" data-url="undefined"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"yinxiaoqiang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+  
+    <article id="post-碰壁反弹" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/14/碰壁反弹/">碰壁反弹</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这个效果实现一个反弹的效果,在很多场合都可以使用哦</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div></pre></td><td class="code"><pre><div class="line">&lt;!doctype html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">	&lt;head&gt;</div><div class="line">		&lt;meta charset=&quot;utf-8&quot;/&gt;</div><div class="line">		&lt;title&gt;碰壁反弹&lt;/title&gt;</div><div class="line">		&lt;style&gt;</div><div class="line">			#wrap&#123;</div><div class="line">				width:1200px;</div><div class="line">				height:800px;</div><div class="line">				border:8px green solid;</div><div class="line">				position: relative;</div><div class="line">			&#125;</div><div class="line">			#inner&#123;</div><div class="line">				width:200px;</div><div class="line">				height:200px;</div><div class="line">				background:black;</div><div class="line">				border:10px yellow solid;</div><div class="line">				position: absolute;</div><div class="line">				top:0;</div><div class="line">				left:0;</div><div class="line">			&#125;</div><div class="line">		&lt;/style&gt;</div><div class="line">	&lt;/head&gt;</div><div class="line">	&lt;body&gt;</div><div class="line">		&lt;div id=&quot;wrap&quot;&gt;</div><div class="line">			&lt;div id=&quot;inner&quot;&gt;&lt;/div&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">	&lt;/body&gt;</div><div class="line">	&lt;script&gt;</div><div class="line">		var oWrap=document.getElementById(&apos;wrap&apos;);</div><div class="line">		var oInner=document.getElementById(&apos;inner&apos;);</div><div class="line">		var speed=10;//定义速度</div><div class="line"></div><div class="line">		// 最大横向移动距离；</div><div class="line">		var Max_Width=oWrap.clientWidth-oInner.offsetWidth;</div><div class="line">		//  最大纵向移动距离；</div><div class="line">		var Max_Height=oWrap.clientHeight-oInner.offsetHeight;</div><div class="line">		// 开关功能</div><div class="line">		var x=y=true;</div><div class="line">		// 测试 0；</div><div class="line">		console.log(oInner.offsetLeft);</div><div class="line">			// 加定时器，每50s循环一次；</div><div class="line">			var timer=null;</div><div class="line">			timer=setInterval(function()&#123;</div><div class="line"></div><div class="line">				// 存变量</div><div class="line">				var ll=oInner.offsetLeft;</div><div class="line">				var tt=oInner.offsetTop;</div><div class="line"></div><div class="line">				if(x)&#123;</div><div class="line">					ll+=speed;</div><div class="line">					if(ll&gt;Max_Width)&#123;</div><div class="line">						x=false;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">				else&#123;</div><div class="line">					ll-=speed;</div><div class="line">					if(ll&lt;0)&#123;</div><div class="line">						x=true;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line"></div><div class="line">				if(y)&#123;</div><div class="line">					tt+=speed;</div><div class="line">					if(tt&gt;Max_Height)&#123;</div><div class="line">						y=false;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">				else&#123;</div><div class="line">					tt-=speed;</div><div class="line">					if(tt&lt;0)&#123;</div><div class="line">						y=true;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">				// 让left和top随着offsetLeft和offsetTop运动；</div><div class="line">				oInner.style.left=ll+&quot;px&quot;;</div><div class="line">				oInner.style.top=tt+&quot;px&quot;;</div><div class="line"></div><div class="line">			&#125;,50)</div><div class="line"></div><div class="line">	&lt;/script&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>你也可以尝试着用canvas做哦</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/14/碰壁反弹/" class="archive-article-date">
+  	<time datetime="2016-12-14T08:18:32.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-14</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="post-碰壁反弹" data-title="碰壁反弹" data-url="undefined"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"yinxiaoqiang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+  
+    <article id="post-移动端拖拽事件" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/14/移动端拖拽事件/">移动端拖拽事件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>主要适用于移动端哦<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">&lt;!doctype html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">	&lt;head&gt;</div><div class="line">		&lt;meta charset=&quot;utf-8&quot;/&gt;</div><div class="line">		&lt;title&gt;移动端拖拽&lt;/title&gt;</div><div class="line">		&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,height=device-height,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no&quot;/&gt;</div><div class="line">		&lt;style&gt;</div><div class="line">			#box&#123;</div><div class="line">				width:200px;</div><div class="line">				height:200px;</div><div class="line">				background-color: red;</div><div class="line">				position:absolute;</div><div class="line">			&#125;</div><div class="line">		&lt;/style&gt;</div><div class="line">	&lt;body&gt;</div><div class="line">		&lt;div id=&quot;box&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;/body&gt;</div><div class="line">	&lt;script&gt;</div><div class="line">		var oBox = document.getElementById(&quot;box&quot;);</div><div class="line">		var x,y;</div><div class="line">		// 绑定touchstart事件</div><div class="line">		oBox.addEventListener(&quot;touchstart&quot;,function(ev)&#123;</div><div class="line">			x=ev.touches[0].clientX-oBox.offsetLeft;</div><div class="line">			y=ev.touches[0].clientY-oBox.offsetTop;</div><div class="line">			console.log(x);</div><div class="line">			 //阻止页面的滑动默认事件</div><div class="line">			document.addEventListener(&quot;touchmove&quot;,defaultEvent,false);</div><div class="line">		&#125;,false)</div><div class="line">		//绑定move事件</div><div class="line">		oBox.addEventListener(&quot;touchmove&quot;,function(ev)&#123;</div><div class="line">			var x1 = ev.touches[0].clientX-x;</div><div class="line">			var y1 = ev.touches[0].clientY-y;</div><div class="line"></div><div class="line">			oBox.style.left = x1 + &quot;px&quot;;</div><div class="line">  			oBox.style.top = y1 + &quot;px&quot;;</div><div class="line">		&#125;,false);</div><div class="line">		oBox.addEventListener(&quot;touchend&quot;,function()&#123;</div><div class="line">			document.removeEventListener(&quot;touchmove&quot;,defaultEvent,false);</div><div class="line">		&#125;,false);</div><div class="line">		//阻止默认事件</div><div class="line">		function defaultEvent(ev) &#123;</div><div class="line">			ev.preventDefault();</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	&lt;/script&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/14/移动端拖拽事件/" class="archive-article-date">
+  	<time datetime="2016-12-14T08:14:20.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-14</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="post-移动端拖拽事件" data-title="移动端拖拽事件" data-url="undefined"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"yinxiaoqiang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+  
+    <article id="post-放大镜" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/14/放大镜/">放大镜</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这个效果的实现是有点难度的,我们慢慢攻克吧<br>首先来点样式布局吧,这里就不多加赘述了</p>
+<p>css部分<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div></pre></td><td class="code"><pre><div class="line">         body&#123;</div><div class="line">	background: #333;</div><div class="line">	margin:0;</div><div class="line">	padding:0;</div><div class="line">&#125;</div><div class="line">.box&#123;</div><div class="line">	position: absolute;</div><div class="line">	top:100px;</div><div class="line">	left:200px;</div><div class="line">	width:460px;</div><div class="line">	height:360px;</div><div class="line">&#125;</div><div class="line">.main&#123;</div><div class="line">	position: absolute;</div><div class="line">	width: 200px;</div><div class="line">	height: 200px;</div><div class="line">	border:1px solid #fff;</div><div class="line">	z-index: 2;</div><div class="line">	cursor: move;</div><div class="line">&#125;</div><div class="line">.minDiv&#123;</div><div class="line">	width:8px;</div><div class="line">	height:8px;</div><div class="line">	background: #fff;</div><div class="line">	font-size: 0;</div><div class="line">	position: absolute;</div><div class="line">&#125;</div><div class="line">.minDiv.left-up&#123;</div><div class="line">	top:-4px;</div><div class="line">	left: -4px;</div><div class="line">	cursor:nw-resize;</div><div class="line">&#125;</div><div class="line">.minDiv.left&#123;</div><div class="line">	top:50%;</div><div class="line">	margin-top:-4px;</div><div class="line">	left: -4px;</div><div class="line">	cursor:w-resize;</div><div class="line">&#125;</div><div class="line">.minDiv.left-down&#123;</div><div class="line">	bottom:-4px;</div><div class="line">	left: -4px;</div><div class="line">	cursor:sw-resize;</div><div class="line">&#125;</div><div class="line">.minDiv.top&#123;</div><div class="line">	top:-4px;</div><div class="line">	left: 50%;</div><div class="line">	margin-left:-4px;</div><div class="line">	cursor:n-resize;</div><div class="line">&#125;</div><div class="line">.minDiv.right-up&#123;</div><div class="line">	top:-4px;</div><div class="line">	right: -4px;</div><div class="line">	cursor:ne-resize;</div><div class="line">&#125;</div><div class="line">.minDiv.right&#123;</div><div class="line">	top:50%;</div><div class="line">	margin-top:-4px;</div><div class="line">	right: -4px;</div><div class="line">	cursor:e-resize;</div><div class="line">&#125;</div><div class="line">.minDiv.right-down&#123;</div><div class="line">	bottom:-4px;</div><div class="line">	right: -4px;</div><div class="line">	cursor:se-resize;</div><div class="line">&#125;</div><div class="line">.minDiv.bottom&#123;</div><div class="line">	bottom:-4px;</div><div class="line">	left: 50%;</div><div class="line">	margin-left:-4px;</div><div class="line">	cursor:s-resize;</div><div class="line">&#125;</div><div class="line"></div><div class="line">img&#123;</div><div class="line">	position: absolute;</div><div class="line">	z-index: 1</div><div class="line">&#125;</div><div class="line">.img1&#123;</div><div class="line">	opacity: 0.5</div><div class="line">&#125;</div><div class="line">.img2&#123;</div><div class="line">	clip:rect(0px,20px,100px,100px);</div><div class="line">&#125;</div><div class="line"></div><div class="line">#preview&#123;</div><div class="line">	position: absolute;</div><div class="line">	overflow: hidden;</div><div class="line">	top:100px;</div><div class="line">	left:680px;</div><div class="line">	width:460px;</div><div class="line">	height:360px;</div><div class="line">&#125;</div><div class="line">#preview #img3&#123;</div><div class="line">	position: absolute;</div><div class="line">	top:0;</div><div class="line">	left:0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>接下来是主体部分了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">       &lt;div id=&quot;box&quot; class=&quot;box&quot;&gt;</div><div class="line">		&lt;img class=&quot;img1&quot; src=&quot;js/1.jpg&quot;/&gt;</div><div class="line">		&lt;img id=&quot;img2&quot; class=&quot;img2&quot; src=&quot;js/1.jpg&quot;/&gt;</div><div class="line">		&lt;div class=&quot;main&quot; id=&quot;main&quot;&gt;</div><div class="line">			&lt;div id=&quot;left-up&quot; class=&quot;minDiv left-up&quot;&gt;&lt;/div&gt;</div><div class="line">			&lt;div id=&quot;left&quot; class=&quot;minDiv left&quot;&gt;&lt;/div&gt;</div><div class="line">			&lt;div id=&quot;left-down&quot; class=&quot;minDiv left-down&quot;&gt;&lt;/div&gt;</div><div class="line">			&lt;div id=&quot;up&quot; class=&quot;minDiv top&quot;&gt;&lt;/div&gt;</div><div class="line">			&lt;div id=&quot;right-up&quot; class=&quot;minDiv right-up&quot;&gt;&lt;/div&gt;</div><div class="line">			&lt;div id=&quot;right&quot; class=&quot;minDiv right&quot;&gt;&lt;/div&gt;</div><div class="line">			&lt;div id=&quot;right-down&quot; class=&quot;minDiv right-down&quot;&gt;&lt;/div&gt;</div><div class="line">			&lt;div id=&quot;down&quot; class=&quot;minDiv bottom&quot;&gt;&lt;/div&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">	&lt;div id=&quot;preview&quot;&gt;</div><div class="line">		&lt;img id=&quot;img3&quot; class=&quot;img3&quot; src=&quot;js/1.jpg&quot;/&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;script src=&quot;js/main.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>最后就是我们渴望的js啦</p>
+<p>先获取一下元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">//防止图片被选中</div><div class="line">document.onselectstart=new Function(&apos;event.returnValue=false;&apos;);</div><div class="line"></div><div class="line">var boxDiv = document.getElementById(&apos;box&apos;);//外层容器</div><div class="line">var mainDiv = document.getElementById(&apos;main&apos;);//选择层</div><div class="line">var leftUpDiv = document.getElementById(&apos;left-up&apos;);//坐上角触点</div><div class="line">var leftDiv = document.getElementById(&apos;left&apos;);//左中间触点</div><div class="line">var leftDownDiv = document.getElementById(&apos;left-down&apos;);//左下角触点</div><div class="line">var upDiv = document.getElementById(&apos;up&apos;);//上中间触点</div><div class="line">var downDiv = document.getElementById(&apos;down&apos;);//下中间触点</div><div class="line">var rightUpDiv = document.getElementById(&apos;right-up&apos;);//右上角触点</div><div class="line">var rightDiv = document.getElementById(&apos;right&apos;);//右中间触点</div><div class="line">var rightDownDiv = document.getElementById(&apos;right-down&apos;);//右下角触点</div><div class="line">var img3=document.getElementById(&apos;img3&apos;);</div><div class="line"></div><div class="line">var ifBool = false;//判断鼠标是否按下</div><div class="line">var contact = &quot;&quot;;//当前拖动的触点</div></pre></td></tr></table></figure></p>
+<p>左边拖动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">//防止图片被选中</div><div class="line">document.onselectstart=new Function(&apos;event.returnValue=false;&apos;);</div><div class="line"></div><div class="line">var boxDiv = document.getElementById(&apos;box&apos;);//外层容器</div><div class="line">var mainDiv = document.getElementById(&apos;main&apos;);//选择层</div><div class="line">var leftUpDiv = document.getElementById(&apos;left-up&apos;);//坐上角触点</div><div class="line">var leftDiv = document.getElementById(&apos;left&apos;);//左中间触点</div><div class="line">var leftDownDiv = document.getElementById(&apos;left-down&apos;);//左下角触点</div><div class="line">var upDiv = document.getElementById(&apos;up&apos;);//上中间触点</div><div class="line">var downDiv = document.getElementById(&apos;down&apos;);//下中间触点</div><div class="line">var rightUpDiv = document.getElementById(&apos;right-up&apos;);//右上角触点</div><div class="line">var rightDiv = document.getElementById(&apos;right&apos;);//右中间触点</div><div class="line">var rightDownDiv = document.getElementById(&apos;right-down&apos;);//右下角触点</div><div class="line">var img3=document.getElementById(&apos;img3&apos;);</div><div class="line"></div><div class="line">var ifBool = false;//判断鼠标是否按下</div><div class="line">var contact = &quot;&quot;;//当前拖动的触点</div></pre></td></tr></table></figure></p>
+<p>右边拖动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">//右边拖动</div><div class="line">function rightMove(e)&#123;</div><div class="line">	var x = e.clientX;//鼠标横坐标</div><div class="line">	if(x &gt; getPosition(boxDiv).left + boxDiv.offsetWidth)&#123;</div><div class="line">		x = getPosition(boxDiv).left + boxDiv.offsetWidth;</div><div class="line">	&#125;</div><div class="line">	var width = mainDiv.clientWidth;//选择层宽度</div><div class="line">	var mainX = getPosition(leftUpDiv).left + 4;//左上角横坐标</div><div class="line">	var addWidth = x - width - mainX;//拖动后应该增加的宽度</div><div class="line"></div><div class="line">	//设置拖动后的宽高和位置</div><div class="line">	mainDiv.style.width = (width + addWidth) + &quot;px&quot;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>上边拖动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">//上边拖动</div><div class="line">function upMove(e)&#123;</div><div class="line">	var y = e.clientY;//鼠标纵坐标</div><div class="line">	if(y &lt; getPosition(boxDiv).top)&#123;</div><div class="line">		y = getPosition(boxDiv).top;</div><div class="line">	&#125;</div><div class="line">	var height = mainDiv.clientHeight;//选择层的高度</div><div class="line">	console.log(height);</div><div class="line">	var mainY = getPosition(leftUpDiv).top + 4;//左上角纵坐标</div><div class="line">	var addHeight = mainY - y;//拖动后应该增加的高度</div><div class="line"></div><div class="line">	//设置拖动后的宽高和位置</div><div class="line">	mainDiv.style.height = (height + addHeight) + &quot;px&quot;;</div><div class="line">	mainDiv.style.top = mainDiv.offsetTop - mainY + y + &quot;px&quot;; //纵坐标减去增加的高度</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>下边拖动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//下边拖动</div><div class="line">function downMove(e)&#123;</div><div class="line">	var y = e.clientY;//鼠标纵坐标</div><div class="line">	if(y &gt; getPosition(boxDiv).top + boxDiv.offsetHeight)&#123;</div><div class="line">		y = getPosition(boxDiv).top + boxDiv.offsetHeight;</div><div class="line">	&#125;</div><div class="line">	var height = mainDiv.clientHeight;//选择层的高度</div><div class="line">	var mainY = getPosition(leftUpDiv).top + 4;//左上角纵坐标</div><div class="line">	var addHeight = y - mainY - height;//拖动后应该增加的高度</div><div class="line">	mainDiv.style.height = (height + addHeight) + &quot;px&quot;;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>设置选择区域可见<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">//设置选择区域可见</div><div class="line">function setChoice()&#123;</div><div class="line">	var top = mainDiv.offsetTop;</div><div class="line">	var right = mainDiv.offsetLeft + mainDiv.offsetWidth;</div><div class="line">	var bottom = mainDiv.offsetTop + mainDiv.offsetHeight;</div><div class="line">	var left = mainDiv.offsetLeft;</div><div class="line">	document.getElementById(&quot;img2&quot;).style.clip = &quot;rect(&quot;+top+&quot;px,&quot;+right+&quot;px,&quot;+bottom+&quot;px,&quot;+left+&quot;px)&quot;;</div><div class="line">	preview(&#123;&quot;top&quot;:top,&quot;right&quot;:right,&quot;bottom&quot;:bottom,&quot;left&quot;:left&#125;);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>获取元素的绝对位置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">//获取元素的绝对位置</div><div class="line">function getPosition(node)&#123;</div><div class="line">	var left = node.offsetLeft;</div><div class="line">	var top = node.offsetTop;</div><div class="line">	current = node.offsetParent; // 取得元素的offsetParent</div><div class="line">	　// 一直循环直到根元素</div><div class="line">　　while (current != null) &#123;</div><div class="line">	　　left += current.offsetLeft;</div><div class="line">	　　top += current.offsetTop;</div><div class="line">	　　current = current.offsetParent;</div><div class="line">　　&#125;</div><div class="line">	return &#123;&quot;left&quot;:left,&quot;top&quot;:top&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>预览一下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//预览</div><div class="line">function preview(view)&#123;</div><div class="line"></div><div class="line">	img3.style.top = -view.top + &quot;px&quot;;</div><div class="line">	img3.style.left = -view.left + &quot;px&quot;;</div><div class="line">	img3.style.clip = &quot;rect(&quot;+view.top+&quot;px,&quot;+view.right+&quot;px,&quot;+view.bottom+&quot;px,&quot;+view.left+&quot;px)&quot;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>鼠标按下事件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//鼠标按下-左上角</div><div class="line">leftUpDiv.onmousedown = function(e)&#123;</div><div class="line">	var ev=e||window.event;</div><div class="line">	ev.cancelBubble=true;</div><div class="line">	ifBool = true;</div><div class="line">	contact = &quot;leftUp&quot;;</div><div class="line"></div><div class="line">&#125;;</div><div class="line">//鼠标按下-左中间</div><div class="line">leftDiv.onmousedown = function(e)&#123;</div><div class="line">	var ev=e||window.event;</div><div class="line">	ev.cancelBubble=true;</div><div class="line">	ifBool = true;</div><div class="line">	contact = &quot;left&quot;;</div><div class="line"></div><div class="line">&#125;;</div><div class="line">//鼠标按下-左下角</div><div class="line">leftDownDiv.onmousedown = function(e)&#123;</div><div class="line">	var ev=e||window.event;</div><div class="line">	ev.cancelBubble=true;</div><div class="line">	ifBool = true;</div><div class="line">	contact = &quot;leftDown&quot;;</div><div class="line"></div><div class="line">&#125;;</div><div class="line">//鼠标按下-上边</div><div class="line">upDiv.onmousedown = function(e)&#123;</div><div class="line">	var ev=e||window.event;</div><div class="line">	ev.cancelBubble=true;</div><div class="line">	ifBool = true;</div><div class="line">	contact = &quot;up&quot;;</div><div class="line"></div><div class="line">&#125;;</div><div class="line">//鼠标按下-下边</div><div class="line">downDiv.onmousedown = function(e)&#123;</div><div class="line">	var ev=e||window.event;</div><div class="line">	ev.cancelBubble=true;</div><div class="line">	ifBool = true;</div><div class="line">	contact = &quot;down&quot;;</div><div class="line"></div><div class="line">&#125;;</div><div class="line">//鼠标按下-右上角</div><div class="line">rightUpDiv.onmousedown = function(e)&#123;</div><div class="line">	var ev=e||window.event;</div><div class="line">	ev.cancelBubble=true;</div><div class="line">	ifBool = true;</div><div class="line">	contact = &quot;rightUp&quot;;</div><div class="line"></div><div class="line">&#125;;</div><div class="line">//鼠标按下-右中间</div><div class="line">rightDiv.onmousedown = function(e)&#123;</div><div class="line">	var ev=e||window.event;</div><div class="line">	ev.cancelBubble=true;</div><div class="line">	ifBool = true;</div><div class="line">	contact = &quot;right&quot;;</div><div class="line"></div><div class="line">&#125;;</div><div class="line">//鼠标按下-右下角</div><div class="line">rightDownDiv.onmousedown = function(e)&#123;</div><div class="line">	var ev=e||window.event;</div><div class="line">	ev.cancelBubble=true;</div><div class="line">	ifBool = true;</div><div class="line">	contact = &quot;rightDown&quot;;</div><div class="line"></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>拖动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//拖动</div><div class="line">window.onmousemove = function(e)&#123;</div><div class="line">	var ev=e||window.event;</div><div class="line">	ev.cancelBubble=true;</div><div class="line">	if(ifBool)&#123;</div><div class="line">		switch(contact)&#123;</div><div class="line">			case &quot;leftUp&quot;:leftMove(e);upMove(e);break;</div><div class="line">			case &quot;left&quot;:leftMove(e);break;</div><div class="line">			case &quot;leftDown&quot;:leftMove(e);downMove(e);break;</div><div class="line">			case &quot;up&quot;:upMove(e);break;</div><div class="line">			case &quot;down&quot;:downMove(e);break;</div><div class="line">			case &quot;rightUp&quot;:rightMove(e);upMove(e);break;</div><div class="line">			case &quot;right&quot;:rightMove(e);break;</div><div class="line">			case &quot;rightDown&quot;:rightMove(e);downMove(e);break;</div><div class="line">			default:alert(&quot;操作错误！&quot;);</div><div class="line">		&#125;</div><div class="line">	var width = mainDiv.offsetWidth;</div><div class="line">	var height = mainDiv.offsetHeight;</div><div class="line">	setChoice();</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line">//鼠标松开</div><div class="line">window.onmouseup = function()&#123;</div><div class="line">	ifBool = false;</div><div class="line">	contact = &quot;&quot;;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">//鼠标点击控制mainDiv的移动</div><div class="line">mainDiv.onmousedown=function(e)&#123;</div><div class="line">	var ev=e||window.event;</div><div class="line"></div><div class="line"></div><div class="line">	boxDiv.onmousemove=function(e)&#123;</div><div class="line">		var ev=e||window.event;</div><div class="line">		var disx=ev.clientX;</div><div class="line">		var disy=ev.clientY;</div><div class="line"></div><div class="line">		var moveX=disx-boxDiv.offsetLeft-mainDiv.offsetWidth/2;</div><div class="line">		// console.log(moveX);</div><div class="line">		var moveY=disy-boxDiv.offsetTop-mainDiv.offsetHeight/2;</div><div class="line">		// console.log(moveY);</div><div class="line"></div><div class="line">		var maxWidth=boxDiv.clientWidth-mainDiv.offsetWidth;</div><div class="line">		var maxHeight=boxDiv.clientHeight-mainDiv.offsetHeight;</div><div class="line"></div><div class="line">		if(moveX&lt;0)&#123;</div><div class="line">			moveX=0;</div><div class="line">		&#125;else if(moveX&gt;maxWidth)&#123;</div><div class="line">			moveX=maxWidth;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		if(moveY&lt;0)&#123;</div><div class="line">			moveY=0;</div><div class="line">		&#125;else if(moveY&gt;maxHeight)&#123;</div><div class="line">			moveY=maxHeight;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		mainDiv.style.left=moveX+&quot;px&quot;;</div><div class="line">		mainDiv.style.top=moveY+&quot;px&quot;;</div><div class="line"></div><div class="line">		img3.style.left=-moveX+&quot;px&quot;;</div><div class="line">		img3.style.top=-moveY+&quot;px&quot;;</div><div class="line">		//右边展示区域的范围</div><div class="line">		preview(&#123;&quot;top&quot;:mainDiv.offsetTop,&quot;left&quot;:mainDiv.offsetLeft,&quot;bottom&quot;:mainDiv.offsetTop+mainDiv.offsetHeight,&quot;right&quot;:mainDiv.offsetLeft+mainDiv.offsetWidth&#125;);</div><div class="line">		//可见区域的范围</div><div class="line">		setChoice();</div><div class="line">	&#125;</div><div class="line">	mainDiv.onmouseup=function()&#123;</div><div class="line">		boxDiv.onmousemove=&quot;&quot;;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">setChoice();//初始化选择区域可见</div></pre></td></tr></table></figure></p>
+<p>看到此博客的伙伴们,记得点赞哦!</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/14/放大镜/" class="archive-article-date">
+  	<time datetime="2016-12-14T03:46:36.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-14</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="post-放大镜" data-title="放大镜" data-url="undefined"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"yinxiaoqiang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+  
+    <article id="post-3D轮播" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/14/3D轮播/">3D轮播</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这个效果,主要采用3d效果展示,技术点主要还是旋转的角度问题,我相信聪明的小伙伴们,肯定猜得到的</p>
+<p>话不多说,犀利一点<br>直接上代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div></pre></td><td class="code"><pre><div class="line">&lt;!doctype html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset=&quot;utf-8&quot;/&gt;</div><div class="line">	&lt;title&gt;3d轮播图&lt;/title&gt;</div><div class="line">	&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">		body &#123;</div><div class="line">			margin: 0;</div><div class="line">			background-color: black;</div><div class="line">		&#125;</div><div class="line">		.view &#123;</div><div class="line">			perspective: 3600px;</div><div class="line">			transform-origin:left;</div><div class="line">		&#125;</div><div class="line">		img &#123;</div><div class="line">			width: 500px;</div><div class="line">		&#125;</div><div class="line">		.space3D &#123;</div><div class="line">			transform-style: preserve-3d;</div><div class="line">			width: 500px;</div><div class="line">			position: relative;</div><div class="line">			margin: 200px auto;</div><div class="line"></div><div class="line">		&#125;</div><div class="line">		.space3D div&#123;</div><div class="line">			position: absolute;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		.space3D div:nth-child(1)&#123;</div><div class="line">			transform: rotateY(0deg) translateZ(730px);</div><div class="line">		&#125;</div><div class="line">		.space3D div:nth-child(2)&#123;</div><div class="line">			transform: rotateY(40deg) translateZ(730px);</div><div class="line">		&#125;</div><div class="line">		.space3D div:nth-child(3)&#123;</div><div class="line">			transform: rotateY(80deg) translateZ(730px);</div><div class="line">		&#125;</div><div class="line">		.space3D div:nth-child(4)&#123;</div><div class="line">			transform: rotateY(120deg) translateZ(730px);</div><div class="line">		&#125;</div><div class="line">		.space3D div:nth-child(5)&#123;</div><div class="line">			transform: rotateY(160deg) translateZ(730px);</div><div class="line">		&#125;</div><div class="line">		.space3D div:nth-child(6)&#123;</div><div class="line">			transform: rotateY(200deg) translateZ(730px);</div><div class="line">		&#125;</div><div class="line">		.space3D div:nth-child(7)&#123;</div><div class="line">			transform: rotateY(240deg) translateZ(730px);</div><div class="line">		&#125;</div><div class="line">		.space3D div:nth-child(8)&#123;</div><div class="line">			transform: rotateY(280deg) translateZ(730px);</div><div class="line">		&#125;</div><div class="line">		.space3D div:nth-child(9)&#123;</div><div class="line">			transform: rotateY(320deg) translateZ(730px);</div><div class="line">		&#125;</div><div class="line">	&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;div class=&quot;view&quot;&gt;</div><div class="line">		&lt;div class=&quot;space3D&quot;&gt;</div><div class="line">			&lt;div&gt;&lt;img src=&quot;../images/lunbo14.png&quot;&gt;&lt;/div&gt;</div><div class="line">			&lt;div&gt;&lt;img src=&quot;../images/lunbo13.png&quot;&gt;&lt;/div&gt;</div><div class="line">			&lt;div&gt;&lt;img src=&quot;../images/lunbo12.png&quot;&gt;&lt;/div&gt;</div><div class="line">			&lt;div&gt;&lt;img src=&quot;../images/lunbo11.png&quot;&gt;&lt;/div&gt;</div><div class="line">			&lt;div&gt;&lt;img src=&quot;../images/lunbo9.png&quot;&gt;&lt;/div&gt;</div><div class="line">			&lt;div&gt;&lt;img src=&quot;../images/lunbo3.png&quot;&gt;&lt;/div&gt;</div><div class="line">			&lt;div&gt;&lt;img src=&quot;../images/lunbo8.png&quot;&gt;&lt;/div&gt;</div><div class="line">			&lt;div&gt;&lt;img src=&quot;../images/lunbo6.png&quot;&gt;&lt;/div&gt;</div><div class="line">			&lt;div&gt;&lt;img src=&quot;../images/lunbo5.png&quot;&gt;&lt;/div&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">	&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line"></div><div class="line">		var view=document.getElementsByClassName(&apos;view&apos;);//获取观众席</div><div class="line">		var space3D=document.getElementsByClassName(&apos;space3D&apos;)[0];//获取舞台</div><div class="line">		var pictures=space3D.getElementsByTagName(&apos;div&apos;);//舞台表演人员</div><div class="line"></div><div class="line">			var index=0;</div><div class="line"></div><div class="line">			//for循环图片</div><div class="line">		for (var i = 0; i &lt; pictures.length; i++) &#123;</div><div class="line"></div><div class="line">			pictures[i].onclick=function() &#123;</div><div class="line"></div><div class="line">				index++;</div><div class="line"></div><div class="line">				space3D.style.transition=&quot;transform 2s&quot;;</div><div class="line"></div><div class="line">				space3D.style.transform=&quot;rotateY(&quot;+40*index+&quot;deg)&quot;;</div><div class="line"></div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line"></div><div class="line"></div><div class="line">	&lt;/script&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
+<p>不要问我为啥这么犀利,嘘。。。。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/14/3D轮播/" class="archive-article-date">
+  	<time datetime="2016-12-14T02:00:44.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-14</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="post-3D轮播" data-title="3D轮播" data-url="undefined"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"yinxiaoqiang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+  
+    <article id="post-折角" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/14/折角/">折角</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本次效果展示主要是通过伪类来实现,效果还不错,感兴趣的同学可以尝试一下</p>
+<p>css部分<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">			*&#123;</div><div class="line">				margin: 0px;</div><div class="line">				padding: 0px;</div><div class="line">				text-decoration: none;</div><div class="line">			&#125;</div><div class="line">			body&#123;</div><div class="line">				background-color: silver;</div><div class="line">				padding: 50px 0 0;</div><div class="line">				text-align:center;</div><div class="line">			&#125;</div><div class="line">			.ribbon &#123;</div><div class="line">				width: 430px;</div><div class="line">				margin: 0px auto;</div><div class="line">				overflow: hidden;</div><div class="line">			&#125;</div><div class="line">			/*左边*/</div><div class="line">			.ribbon:before&#123;</div><div class="line">				content: &quot;&quot;;</div><div class="line">				float: left;</div><div class="line">				/*设置margin-top是为了和a里面的span在同一行*/</div><div class="line">				margin-top: 8px;</div><div class="line">				border: 24px solid #fff;</div><div class="line">				border-left-color: transparent;</div><div class="line">			&#125;</div><div class="line">			/*右边*/</div><div class="line">			.ribbon:after&#123;</div><div class="line">				content: &quot;&quot;;</div><div class="line">				float: left;</div><div class="line">				margin-top: 8px;</div><div class="line">				border: 24px solid #fff;</div><div class="line">				border-right-color: transparent;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			.ribbon a&#123;</div><div class="line">			    float: left;</div><div class="line">			    /*为hover有突出效果,所以设置的高度要比两边的高*/</div><div class="line">			    height: 56px;</div><div class="line">				color: #000;</div><div class="line">				overflow: hidden;</div><div class="line">			&#125;</div><div class="line">			.ribbon span&#123;</div><div class="line">				display: block;</div><div class="line">				background-color: #fff;</div><div class="line">				line-height: 48px;</div><div class="line">				padding: 0px 17px;</div><div class="line">				margin-top: 8px;</div><div class="line">				position: relative;</div><div class="line">				font-family: HUM521L,serif;</div><div class="line">				font-size: 17px;</div><div class="line"></div><div class="line">				transition: background-color 0.2s, margin-top 0.2s;</div><div class="line">			&#125;</div><div class="line">			.ribbon a:hover span&#123;</div><div class="line">				background: #FFD204;</div><div class="line">				margin-top: 0;</div><div class="line">			&#125;</div><div class="line">			.ribbon span:before&#123;</div><div class="line">				content: &quot;&quot;;</div><div class="line">				float: left;</div><div class="line">				position: absolute;</div><div class="line">				top: 48px;</div><div class="line">				left: 0px;</div><div class="line">				border-right: 8px solid #9B8651;</div><div class="line">				border-bottom: 8px solid #fff;</div><div class="line">			&#125;</div><div class="line">			.ribbon span:after&#123;</div><div class="line">				content: &quot;&quot;;</div><div class="line">				float: left;</div><div class="line">				position: absolute;</div><div class="line">				top: 48px;</div><div class="line">				right: 0px;</div><div class="line">				border-left: 8px solid #9B8651;</div><div class="line">				border-bottom: 8px solid #fff;</div><div class="line">			&#125;</div><div class="line"></div><div class="line"></div><div class="line">		&lt;/style&gt;</div></pre></td></tr></table></figure></p>
+<p>主体部分很简单</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;ribbon&quot;&gt;</div><div class="line">    &lt;a href=&quot;##&quot;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;</div><div class="line">    &lt;a href=&quot;##&quot;&gt;&lt;span&gt;About&lt;/span&gt;&lt;/a&gt;</div><div class="line">    &lt;a href=&quot;##&quot;&gt;&lt;span&gt;Services&lt;/span&gt;&lt;/a&gt;</div><div class="line">    &lt;a href=&quot;##&quot;&gt;&lt;span&gt;Contact&lt;/span&gt;&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/14/折角/" class="archive-article-date">
+  	<time datetime="2016-12-14T01:53:57.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-14</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="post-折角" data-title="折角" data-url="undefined"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"yinxiaoqiang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+  
+    <article id="post-烟花" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/14/烟花/">烟花</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前在网上看过一个烟花效果的展示,觉得非常不错,然后自己也想搞一个,虽然那个效果是随机出现烟花,但是我非要搞出自己的,本次效果的展示通过点击文档,然后释放烟花</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta  charset=&quot;UTF-8&quot;&gt;</div><div class="line">	&lt;title&gt;烟花效果&lt;/title&gt;</div><div class="line">	&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">		body&#123;background: black;overflow: hidden;&#125;</div><div class="line">		div&#123;position: absolute;&#125;</div><div class="line">	&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line"></div><div class="line">	window.onload = function()&#123;</div><div class="line"></div><div class="line"></div><div class="line">	&#125;</div><div class="line">	function rgb()&#123;//创建颜色随机值</div><div class="line">		var str =Math.ceil(Math.random()*16777215).toString(16);//向上取整</div><div class="line">		while(str.length&lt;6)&#123;</div><div class="line">			str=&apos;0&apos;+str;</div><div class="line">		&#125;</div><div class="line">		return str;</div><div class="line">	&#125;</div><div class="line">		document.onclick=function(event)&#123;</div><div class="line">			var oEvent = event || window.event;</div><div class="line">			var t =oEvent.clientY;</div><div class="line">			var l =oEvent.clientX;</div><div class="line">			var oRdeDiv =document.createElement(&apos;div&apos;);//创建一个div</div><div class="line">			oRdeDiv.style.width = &apos;4px&apos;;</div><div class="line">			oRdeDiv.style.height = &apos;30px&apos;;</div><div class="line">			oRdeDiv.style.background = &apos;red&apos;;</div><div class="line">			document.body.appendChild(oRdeDiv);//向body添加一个div元素</div><div class="line">			oRdeDiv.style.top=document.documentElement.clientHeight+&apos;px&apos;;</div><div class="line">			oRdeDiv.style.left=oEvent.clientX+&apos;px&apos;;</div><div class="line">			//alert(oRdeDiv.offsetTop)</div><div class="line">			var timer =setInterval(function()&#123;//让创建的这个div从下往上打上来！</div><div class="line">			oRdeDiv.style.top = oRdeDiv.offsetTop-20+&apos;px&apos;;</div><div class="line">			if(oRdeDiv.offsetTop &lt;= t)&#123;</div><div class="line">				clearInterval(timer);</div><div class="line">				document.body.removeChild(oRdeDiv);</div><div class="line">				var i=0;</div><div class="line">				var aDiv = [];</div><div class="line">				for(var i=0;i&lt;50;i++)&#123;//创建多个div</div><div class="line">					var oDiv = document.createElement(&apos;div&apos;);</div><div class="line">					oDiv.style.background=&apos;#&apos;+rgb();</div><div class="line">					oDiv.style.width=&apos;2px&apos;;</div><div class="line">					oDiv.style.height=&apos;2px&apos;;</div><div class="line">					oDiv.style.left=l+&apos;px&apos;;</div><div class="line">					oDiv.style.top=t+&apos;px&apos;;</div><div class="line">					document.body.appendChild(oDiv);</div><div class="line">					aDiv.push(oDiv);</div><div class="line">					oDiv.speedX =Math.random()*20-10;//添加一个x轴的速度</div><div class="line">					oDiv.speedY =Math.random()*20-10;//添加一个y轴的速度</div><div class="line"></div><div class="line">				&#125;</div><div class="line">				var newtimer =setInterval(function()&#123;//让每个div随机往下掉，以达到烟花效果</div><div class="line">					var count=0;</div><div class="line">					for(var i=0;i&lt;aDiv.length;i++)&#123;</div><div class="line">						if(!aDiv[i])continue;//当aDiv[i]为空不再进行循环操作</div><div class="line">						aDiv[i].style.left=aDiv[i].offsetLeft+aDiv[i].speedX+&apos;px&apos;;</div><div class="line">						aDiv[i].style.top=aDiv[i].offsetTop+aDiv[i].speedY+&apos;px&apos;;</div><div class="line">						aDiv[i].speedY++;//y轴的速度越来越大以便烟花向下掉</div><div class="line">						var winWidth = document.documentElement.clientWidth || document.body.clientWidth;</div><div class="line">						var winHeight = document.documentElement.clientHeight || document.body.clientHeight;</div><div class="line">						if(aDiv[i].offsetLeft&lt;0 || aDiv[i].offsetLeft&gt;winWidth || aDiv[i].offsetTop&gt;winHeight)&#123;</div><div class="line">							document.body.removeChild(aDiv[i]);</div><div class="line">							aDiv[i]=null;</div><div class="line">						&#125;</div><div class="line">						count++;</div><div class="line">					&#125;</div><div class="line">					if(count==0)&#123;//当所有的div小块掉出屏幕是清除定时器</div><div class="line">						clearInterval(newtimer);</div><div class="line">					&#125;</div><div class="line">				&#125;,30)</div><div class="line">			&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">			&#125;,30)</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/14/烟花/" class="archive-article-date">
+  	<time datetime="2016-12-14T01:45:46.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-14</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="post-烟花" data-title="烟花" data-url="undefined"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"yinxiaoqiang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
+  
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Xiaoqiang Yin
+    	</div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: true,
+		isPost: false,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/js/" style="font-size: 10px;">js</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://3241746995.github.io/">王敏</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://wjydc.github.io/">魏娇</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://jasonellen.github.io/">张南南</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://zjflove.github.io/">章江锋</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://yaomengyyu.github.io/">刘家浩</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/litten/hexo-theme-yilia">litten</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;&lt;br&gt;我会继续努力&lt;br&gt;&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

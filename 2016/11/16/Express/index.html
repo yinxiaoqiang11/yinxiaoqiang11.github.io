@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>Express和Mongodb安装 | 殷孝强</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Express安装首先你是安装了Node.js的基础上,在你觉得合适的地方创建一个应用目录,然后进入此目录作为当前目录1234$ mkdir myapp$ cd myapp$ npm init(此过程会要输入几个参数,我们一般不改,直接回车即可)$ npm install express --save
+接下来创建一个应用的骨架1$ sudo npm install express-generato">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Express和Mongodb安装">
+<meta property="og:url" content="http://yoursite.com/2016/11/16/Express/index.html">
+<meta property="og:site_name" content="殷孝强">
+<meta property="og:description" content="Express安装首先你是安装了Node.js的基础上,在你觉得合适的地方创建一个应用目录,然后进入此目录作为当前目录1234$ mkdir myapp$ cd myapp$ npm init(此过程会要输入几个参数,我们一般不改,直接回车即可)$ npm install express --save
+接下来创建一个应用的骨架1$ sudo npm install express-generato">
+<meta property="og:updated_time" content="2016-11-16T03:59:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Express和Mongodb安装">
+<meta name="twitter:description" content="Express安装首先你是安装了Node.js的基础上,在你觉得合适的地方创建一个应用目录,然后进入此目录作为当前目录1234$ mkdir myapp$ cd myapp$ npm init(此过程会要输入几个参数,我们一般不改,直接回车即可)$ npm install express --save
+接下来创建一个应用的骨架1$ sudo npm install express-generato">
+  
+    <link rel="alternative" href="/atom.xml" title="殷孝强" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://h.hiphotos.baidu.com/image/pic/item/8694a4c27d1ed21b61797af2ae6eddc451da3f70.jpg">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="http://img3.imgtn.bdimg.com/it/u=1920956503,1400511548&amp;fm=21&amp;gp=0.jpg" class="js-avatar show">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Xiaoqiang Yin</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">xiao Yin</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">我的主页</a></li>
+	        
+				<li><a href="/">我的随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/yinxiaoqiang11" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Xiaoqiang Yin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="http://img3.imgtn.bdimg.com/it/u=1920956503,1400511548&amp;fm=21&amp;gp=0.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Xiaoqiang Yin</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">xiao Yin</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">我的主页</a></li>
+		        
+					<li><a href="/">我的随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/yinxiaoqiang11" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-Express" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Express和Mongodb安装
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Express安装"><a href="#Express安装" class="headerlink" title="Express安装"></a>Express安装</h3><p>首先你是安装了<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>的基础上,在你觉得合适的地方创建一个应用目录,然后进入此目录作为当前目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ mkdir myapp</div><div class="line">$ cd myapp</div><div class="line">$ npm init(此过程会要输入几个参数,我们一般不改,直接回车即可)</div><div class="line">$ npm install express --save</div></pre></td></tr></table></figure></p>
+<p>接下来创建一个应用的骨架<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install express-generator -g</div></pre></td></tr></table></figure></p>
+<p>我们可以创建一个命名为Express的应用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ express -e -c less Express</div><div class="line">$ cd Express</div><div class="line">$ npm install</div></pre></td></tr></table></figure></p>
+<p>启动这个运用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm start</div></pre></td></tr></table></figure></p>
+<p>然后在浏览器中打开 <a href="http://localhost:3000/" target="_blank" rel="external">http://localhost:3000/</a> 网址就可以看到这个应用了</p>
+<h3 id="Mongodb安装"><a href="#Mongodb安装" class="headerlink" title="Mongodb安装"></a>Mongodb安装</h3><p>准备阶段,首先需把我们所要的环境配置好,你们可至<a href="https://github.com/yinxiaoqiang11/mongod" target="_blank" rel="external">我的github账号</a>进行下载到本地<br>然后执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mv -n ~/Downloads/mongodb-osx-x86_64-3.2.9 ~/Applications/mongodb/(注意路径哦,执行此步所下载的文件是看不见的)</div></pre></td></tr></table></figure></p>
+<p>下一步重新打开终端,在根目录下输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sudo mkdir -p /data/db</div><div class="line">$ sudo chown -R  yonghuming /data(注意这里为自己的用户名,用户名后面必须有空格隔开)</div></pre></td></tr></table></figure></p>
+<p>然后再回到根目录下直接执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cd Users/lanou/Applications/mongodb/bin</div></pre></td></tr></table></figure></p>
+<p>您也可以通过终端往下找到此路径的bin文件夹,只不过有点繁琐一些,然后回车执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ./mongod</div></pre></td></tr></table></figure></p>
+<p>下一步打开另一个终端,再次到bin文件下,回车,输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ./mongo</div></pre></td></tr></table></figure></p>
+<h3 id="Mongodb非常实用的命令"><a href="#Mongodb非常实用的命令" class="headerlink" title="Mongodb非常实用的命令"></a>Mongodb非常实用的命令</h3><p>查看所有数据库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ show dbs</div></pre></td></tr></table></figure></p>
+<p>创建数据库,如果已有当前的数据库,会自动切换到当前数据库,如果没有,则会创建一个数据库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ use 数据库名</div></pre></td></tr></table></figure></p>
+<p>查看当前所连接的db<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ db</div></pre></td></tr></table></figure></p>
+<p>删除数据库,进入所要删除的数据库,执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ db.dropDatabase()</div></pre></td></tr></table></figure></p>
+<p>插入数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ db.集合名称.insert(&#123;&#125;)</div></pre></td></tr></table></figure></p>
+<p>更新操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.user.updata(&quot;目标&quot;,&quot;更新内容&quot;)</div></pre></td></tr></table></figure></p>
+<p>查找当前集合下的所有数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.user.find()</div></pre></td></tr></table></figure></p>
+<p>查找当前集合的第一条数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.user.findOne()</div></pre></td></tr></table></figure></p>
+<p>移除目标,此操作会把目标的所有数据删除掉<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.user.remove(&#123;目标&#125;)</div></pre></td></tr></table></figure></p>
+<p>删除集合<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.集合名称.drop()</div></pre></td></tr></table></figure></p>
+<p>drop()和remove()区别<br>    remove用于将集合中的文档删除，但不删除集合本身，也不删除集合的索引。<br>    drop不仅删除集合的文档，也会删除集合本身，同时也会删除在集合上创建的索引。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/11/16/Express/" class="archive-article-date">
+  	<time datetime="2016-11-16T01:57:53.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-16</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/11/18/img加载/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          img加载
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/20/博客搭建/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mac OS 博客搭建</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="post-Express" data-title="Express和Mongodb安装" data-url="http://yoursite.com/2016/11/16/Express/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"yinxiaoqiang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Xiaoqiang Yin
+    	</div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/js/" style="font-size: 10px;">js</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://3241746995.github.io/">王敏</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://wjydc.github.io/">魏娇</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://jasonellen.github.io/">张南南</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://zjflove.github.io/">章江锋</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://yaomengyyu.github.io/">刘家浩</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/litten/hexo-theme-yilia">litten</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;&lt;br&gt;我会继续努力&lt;br&gt;&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

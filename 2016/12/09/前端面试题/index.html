@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>前端面试题 | 殷孝强</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="自己总结的前端面试题目,觉得挺有用的Doctype作用？标准模式与兼容模式各有什么区别?（1）、&amp;lt;!DOCTYPE&amp;gt;声明位于位于HTML文档中的第一行，处于  标签之前。告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。
+（2）、标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端面试题">
+<meta property="og:url" content="http://yoursite.com/2016/12/09/前端面试题/index.html">
+<meta property="og:site_name" content="殷孝强">
+<meta property="og:description" content="自己总结的前端面试题目,觉得挺有用的Doctype作用？标准模式与兼容模式各有什么区别?（1）、&amp;lt;!DOCTYPE&amp;gt;声明位于位于HTML文档中的第一行，处于  标签之前。告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。
+（2）、标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式">
+<meta property="og:updated_time" content="2016-12-09T14:12:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端面试题">
+<meta name="twitter:description" content="自己总结的前端面试题目,觉得挺有用的Doctype作用？标准模式与兼容模式各有什么区别?（1）、&amp;lt;!DOCTYPE&amp;gt;声明位于位于HTML文档中的第一行，处于  标签之前。告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。
+（2）、标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式">
+  
+    <link rel="alternative" href="/atom.xml" title="殷孝强" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://h.hiphotos.baidu.com/image/pic/item/8694a4c27d1ed21b61797af2ae6eddc451da3f70.jpg">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="http://img3.imgtn.bdimg.com/it/u=1920956503,1400511548&amp;fm=21&amp;gp=0.jpg" class="js-avatar show">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Xiaoqiang Yin</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">xiao Yin</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">我的主页</a></li>
+	        
+				<li><a href="/">我的随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/yinxiaoqiang11" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Xiaoqiang Yin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="http://img3.imgtn.bdimg.com/it/u=1920956503,1400511548&amp;fm=21&amp;gp=0.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Xiaoqiang Yin</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">xiao Yin</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">我的主页</a></li>
+		        
+					<li><a href="/">我的随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/yinxiaoqiang11" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-前端面试题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      前端面试题
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="自己总结的前端面试题目-觉得挺有用的"><a href="#自己总结的前端面试题目-觉得挺有用的" class="headerlink" title="自己总结的前端面试题目,觉得挺有用的"></a>自己总结的前端面试题目,觉得挺有用的</h3><h4 id="Doctype作用？标准模式与兼容模式各有什么区别"><a href="#Doctype作用？标准模式与兼容模式各有什么区别" class="headerlink" title="Doctype作用？标准模式与兼容模式各有什么区别?"></a>Doctype作用？标准模式与兼容模式各有什么区别?</h4><p>（1）、&lt;!DOCTYPE&gt;声明位于位于HTML文档中的第一行，处于 <html> 标签之前。告知浏览器的解析器用什么文档标准解析这个文档。DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。</html></p>
+<p>（2）、标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作。</p>
+<h4 id="HTML5-为什么只需要写-lt-DOCTYPE-HTML-gt-？"><a href="#HTML5-为什么只需要写-lt-DOCTYPE-HTML-gt-？" class="headerlink" title="HTML5 为什么只需要写 &lt;!DOCTYPE HTML&gt;？"></a>HTML5 为什么只需要写 &lt;!DOCTYPE HTML&gt;？</h4><p> HTML5 不基于 SGML，因此不需要对DTD进行引用，但是需要doctype来规范浏览器的行为（让浏览器按照它们应该的方式来运行）；</p>
+<p> 而HTML4.01基于SGML,所以需要对DTD进行引用，才能告知浏览器文档所使用的文档类型。</p>
+<h4 id="页面导入样式时，使用link和-import有什么区别？"><a href="#页面导入样式时，使用link和-import有什么区别？" class="headerlink" title="页面导入样式时，使用link和@import有什么区别？"></a>页面导入样式时，使用link和@import有什么区别？</h4><p> （1）link属于XHTML标签，除了加载CSS外，还能用于定义RSS, 定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS;</p>
+<p> （2）页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;</p>
+<p> （3）import是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题;</p>
+<h4 id="介绍一下你对浏览器内核的理解？"><a href="#介绍一下你对浏览器内核的理解？" class="headerlink" title="介绍一下你对浏览器内核的理解？"></a>介绍一下你对浏览器内核的理解？</h4><p> 主要分成两部分：渲染引擎(layout engineer或Rendering Engine)和JS引擎。<br> 渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核。</p>
+<p> JS引擎则：解析和执行javascript来实现网页的动态效果。</p>
+<p> 最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎。</p>
+<h4 id="浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？"><a href="#浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？" class="headerlink" title="浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？"></a>浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？</h4><p> 在线的情况下，浏览器发现html头部有manifest属性，它会请求manifest文件，如果是第一次访问app，那么浏览器就会根据manifest文件的内容下载相应的资源并且进行离线存储。如果已经访问过app并且资源已经离线存储了，那么浏览器就会使用离线的资源加载页面，然后浏览器会对比新的manifest文件与旧的manifest文件，如果文件没有发生改变，就不做任何操作，如果文件改变了，那么就会重新下载文件中的资源并进行离线存储。<br> 离线的情况下，浏览器就直接使用离线存储的资源。</p>
+<h4 id="请描述一下-cookies，sessionStorage-和-localStorage-的区别？"><a href="#请描述一下-cookies，sessionStorage-和-localStorage-的区别？" class="headerlink" title="请描述一下 cookies，sessionStorage 和 localStorage 的区别？"></a>请描述一下 cookies，sessionStorage 和 localStorage 的区别？</h4><p> cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。<br> cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递。<br> sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。</p>
+<p> 存储大小：<br>     cookie数据大小不能超过4k。<br>     sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。</p>
+<p> 有期时间：<br>     localStorage    存储持久数据，浏览器关闭后数据不丢失除非主动删除数据；<br>     sessionStorage  数据在当前浏览器窗口关闭后自动删除。<br>     cookie          设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭</p>
+<h4 id="Label的作用是什么？是怎么用的？"><a href="#Label的作用是什么？是怎么用的？" class="headerlink" title="Label的作用是什么？是怎么用的？"></a>Label的作用是什么？是怎么用的？</h4><p> label标签来定义表单控制间的关系,当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;label for=&quot;Name&quot;&gt;Number:&lt;/label&gt;</div><div class="line">&lt;input type=“text“name=&quot;Name&quot; id=&quot;Name&quot;/&gt;</div><div class="line"></div><div class="line">&lt;label&gt;Date:&lt;input type=&quot;text&quot; name=&quot;B&quot;/&gt;&lt;/label&gt;</div></pre></td></tr></table></figure></p>
+<h4 id="HTML5的form如何关闭自动完成功能？"><a href="#HTML5的form如何关闭自动完成功能？" class="headerlink" title="HTML5的form如何关闭自动完成功能？"></a>HTML5的form如何关闭自动完成功能？</h4><p> 给不想要提示的 form 或某个 input 设置为 autocomplete=off。</p>
+<h4 id="如何实现浏览器内多个标签页之间的通信-阿里"><a href="#如何实现浏览器内多个标签页之间的通信-阿里" class="headerlink" title="如何实现浏览器内多个标签页之间的通信? (阿里)"></a>如何实现浏览器内多个标签页之间的通信? (阿里)</h4><p> WebSocket、SharedWorker；<br> 也可以调用localstorge、cookies等本地存储方式；</p>
+<p> localstorge另一个浏览上下文里被添加、修改或删除时，它都会触发一个事件，<br> 我们通过监听事件，控制它的值来进行页面信息通信；<br> 注意quirks：Safari 在无痕模式下设置localstorge值时会抛出 QuotaExceededError 的异常；</p>
+<h4 id="页面可见性（Page-Visibility-API）-可以有哪些用途？"><a href="#页面可见性（Page-Visibility-API）-可以有哪些用途？" class="headerlink" title="页面可见性（Page Visibility API） 可以有哪些用途？"></a>页面可见性（Page Visibility API） 可以有哪些用途？</h4><p> 通过 visibilityState 的值检测页面当前是否可见，以及打开网页的时间等;<br> 在页面被切换到其他后台进程的时候，自动暂停音乐或视频的播放；</p>
+<h4 id="如何居中div？"><a href="#如何居中div？" class="headerlink" title="如何居中div？"></a>如何居中div？</h4><p> 水平居中：给div设置一个宽度，然后添加margin:0 auto属性</p>
+<p> div{<br>     width:200px;<br>     margin:0 auto;<br>  }<br> 让绝对定位的div居中</p>
+<p> div {<br>     position: absolute;<br>     width: 300px;<br>     height: 300px;<br>     margin: auto;<br>     top: 0;<br>     left: 0;<br>     bottom: 0;<br>     right: 0;<br>     background-color: pink; /<em> 方便看效果 </em>/<br> }<br> 水平垂直居中一</p>
+<p> 确定容器的宽高 宽500 高 300 的层<br> 设置层的外边距</p>
+<p> div {<br>     position: relative;     /<em> 相对定位或绝对定位均可 </em>/<br>     width:500px;<br>     height:300px;<br>     top: 50%;<br>     left: 50%;<br>     margin: -150px 0 0 -250px;      /<em> 外边距为自身宽高的一半 </em>/<br>     background-color: pink;     /<em> 方便看效果 </em>/</p>
+<p>  }<br> 水平垂直居中二</p>
+<p> 未知容器的宽高，利用 <code>transform</code> 属性</p>
+<p> div {<br>     position: absolute;     /<em> 相对定位或绝对定位均可 </em>/<br>     width:500px;<br>     height:300px;<br>     top: 50%;<br>     left: 50%;<br>     transform: translate(-50%, -50%);<br>     background-color: pink;     /<em> 方便看效果 </em>/</p>
+<p> }<br> 水平垂直居中三</p>
+<p> 利用 flex 布局<br> 实际使用时应考虑兼容性</p>
+<p> .container {<br>     display: flex;<br>     align-items: center;        /<em> 垂直居中 </em>/<br>     justify-content: center;    /<em> 水平居中 </em>/</p>
+<p> }<br> .container div {<br>     width: 100px;<br>     height: 100px;<br>     background-color: pink;     /<em> 方便看效果 </em>/<br> }</p>
+<h4 id="display有哪些值？说明他们的作用。"><a href="#display有哪些值？说明他们的作用。" class="headerlink" title="display有哪些值？说明他们的作用。"></a>display有哪些值？说明他们的作用。</h4><p>  block         块类型。默认宽度为父元素宽度，可设置宽高，换行显示。<br>   none          缺省值。象行内元素类型一样显示。<br>   inline        行内元素类型。默认宽度为内容宽度，不可设置宽高，同行显示。<br>   inline-block  默认宽度为内容宽度，可以设置宽高，同行显示。<br>   list-item     象块类型元素一样显示，并添加样式列表标记。<br>   table         此元素会作为块级表格来显示。<br>   inherit       规定应该从父元素继承 display 属性的值。</p>
+<h4 id="用纯CSS创建一个三角形的原理是什么？"><a href="#用纯CSS创建一个三角形的原理是什么？" class="headerlink" title="用纯CSS创建一个三角形的原理是什么？"></a>用纯CSS创建一个三角形的原理是什么？</h4><p> 把上、左、右三条边隐藏掉（颜色设为 transparent）</p>
+<p> #demo {<br>   width: 0;<br>   height: 0;<br>   border-width: 20px;<br>   border-style: solid;<br>   border-color: transparent transparent red transparent;<br> }</p>
+<h4 id="经常遇到的浏览器的兼容性有哪些？原因，解决方法是什么，常用hack的技巧-？"><a href="#经常遇到的浏览器的兼容性有哪些？原因，解决方法是什么，常用hack的技巧-？" class="headerlink" title="经常遇到的浏览器的兼容性有哪些？原因，解决方法是什么，常用hack的技巧 ？"></a>经常遇到的浏览器的兼容性有哪些？原因，解决方法是什么，常用hack的技巧 ？</h4><p> png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8.</p>
+<ul>
+<li><p>浏览器默认的margin和padding不同。解决方案是加一个全局的*{margin:0;padding:0;}来统一。</p>
+</li>
+<li><p>IE6双边距bug:块属性标签float后，又有横行的margin情况下，在ie6显示margin比设置的大。</p>
+<p>浮动ie产生的双倍距离 #box{ float:left; width:10px; margin:0 0 0 100px;}</p>
+<p>这种情况之下IE会产生20px的距离，解决方案是在float的标签样式控制中加入 ——<em>display:inline;将其转化为行内属性。(</em>这个符号只有ie6会识别)</p>
+<p>渐进识别的方式，从总体中逐渐排除局部。</p>
+<p>首先，巧妙的使用“\9”这一标记，将IE游览器从所有情况中分离出来。<br>接着，再次使用“+”将IE8和IE7、IE6分离开来，这样IE8已经独立识别。</p>
+<p>css</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.bb&#123;</div><div class="line">    background-color:red;/*所有识别*/</div><div class="line">    background-color:#00deff\9; /*IE6、7、8识别*/</div><div class="line">    +background-color:#a200ff;/*IE6、7识别*/</div><div class="line">    _background-color:#1e0bd1;/*IE6识别*/</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>IE下,可以使用获取常规属性的方法来获取自定义属性,<br>也可以使用getAttribute()获取自定义属性;<br>Firefox下,只能使用getAttribute()获取自定义属性。<br>解决方法:统一通过getAttribute()获取自定义属性。</p>
+</li>
+<li><p>IE下,even对象有x,y属性,但是没有pageX,pageY属性;<br>Firefox下,event对象有pageX,pageY属性,但是没有x,y属性。</p>
+</li>
+<li><p>解决方法：（条件注释）缺点是在IE浏览器下可能会增加额外的HTTP请求数。</p>
+</li>
+<li><p>Chrome 中文界面下默认会将小于 12px 的文本强制按照 12px 显示,<br>可通过加入 CSS 属性 -webkit-text-size-adjust: none; 解决。</p>
+<p>超链接访问过后hover样式就不出现了 被点击访问过的超链接样式不在具有hover和active了解决方法是改变CSS属性的排列顺序:<br>L-V-H-A :  a:link {} a:visited {} a:hover {} a:active {}</p>
+<h4 id="请解释一下为什么需要清除浮动？清除浮动的方式"><a href="#请解释一下为什么需要清除浮动？清除浮动的方式" class="headerlink" title="请解释一下为什么需要清除浮动？清除浮动的方式"></a>请解释一下为什么需要清除浮动？清除浮动的方式</h4><p>清除浮动是为了清除使用浮动元素产生的影响。浮动的元素，高度会塌陷，而高度的塌陷使我们页面后面的布局不能正常显示。</p>
+<p>1、父级div定义height；<br>2、父级div 也一起浮动；<br>3、常规的使用一个class；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">.clearfix:before, .clearfix:after &#123;</div><div class="line">    content: &quot; &quot;;</div><div class="line">    display: table;</div><div class="line">&#125;</div><div class="line">.clearfix:after &#123;</div><div class="line">    clear: both;</div><div class="line">&#125;</div><div class="line">.clearfix &#123;</div><div class="line">    *zoom: 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>4、SASS编译的时候，浮动元素的父级div定义伪类:after</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&amp;:after,&amp;:before&#123;</div><div class="line">    content: &quot; &quot;;</div><div class="line">    visibility: hidden;</div><div class="line">    display: block;</div><div class="line">    height: 0;</div><div class="line">    clear: both;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>解析原理：<br>1) display:block 使生成的元素以块级元素显示,占满剩余空间;<br>2) height:0 避免生成内容破坏原有布局的高度。<br>3) visibility:hidden 使生成的内容不可见，并允许可能被生成内容盖住的内容可以进行点击和交互;<br>4）通过 content:”.”生成内容作为最后一个元素，至于content里面是点还是其他都是可以的，例如oocss里面就有经典的 content:”.”,有些版本可能content 里面内容为空,一丝冰凉是不推荐这样做的,firefox直到7.0 content:”” 仍然会产生额外的空隙；<br>5）zoom：1 触发IE hasLayout。</p>
+<p>通过分析发现，除了clear：both用来闭合浮动的，其他代码无非都是为了隐藏掉content生成的内容，这也就是其他版本的闭合浮动为什么会有font-size：0，line-height：0。</p>
+<h4 id="before-和-after中双冒号和单冒号-有什么区别？解释一下这2个伪元素的作用。"><a href="#before-和-after中双冒号和单冒号-有什么区别？解释一下这2个伪元素的作用。" class="headerlink" title="::before 和 :after中双冒号和单冒号 有什么区别？解释一下这2个伪元素的作用。"></a>::before 和 :after中双冒号和单冒号 有什么区别？解释一下这2个伪元素的作用。</h4><p>单冒号(:)用于CSS3伪类，双冒号(::)用于CSS3伪元素。（伪元素由双冒号和伪元素名称组成）<br>双冒号是在当前规范中引入的，用于区分伪类和伪元素。不过浏览器需要同时支持旧的已经存在的伪元素写法，<br>比如:first-line、:first-letter、:before、:after等，<br>而新的在CSS3中引入的伪元素则不允许再支持旧的单冒号的写法。</p>
+<p>想让插入的内容出现在其它内容前，使用::before，否者，使用::after；<br>在代码顺序上，::after生成的内容也比::before生成的内容靠后。<br>如果按堆栈视角，::after生成的内容会在::before生成的内容之上</p>
+<h4 id="让页面里的字体变清晰，变细用CSS怎么做？"><a href="#让页面里的字体变清晰，变细用CSS怎么做？" class="headerlink" title="让页面里的字体变清晰，变细用CSS怎么做？"></a>让页面里的字体变清晰，变细用CSS怎么做？</h4><p>-webkit-font-smoothing: antialiased;</p>
+<h4 id="position-fixed-在android下无效怎么处理？"><a href="#position-fixed-在android下无效怎么处理？" class="headerlink" title="position:fixed;在android下无效怎么处理？"></a>position:fixed;在android下无效怎么处理？</h4><p>fixed的元素是相对整个页面固定位置的，你在屏幕上滑动只是在移动这个所谓的viewport，<br>原来的网页还好好的在那，fixed的内容也没有变过位置，<br>所以说并不是iOS不支持fixed，只是fixed的元素不是相对手机屏幕固定的。</p>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+<h4 id="null，undefined-的区别？"><a href="#null，undefined-的区别？" class="headerlink" title="null，undefined 的区别？"></a>null，undefined 的区别？</h4><p>null        表示一个对象是“没有值”的值，也就是值为“空”；<br>undefined   表示一个变量声明了没有初始化(赋值)；</p>
+<p>undefined不是一个有效的JSON，而null是；<br>undefined的类型(typeof)是undefined；<br>null的类型(typeof)是object；</p>
+</li>
+</ul>
+<p> Javascript将未赋值的变量默认值设为undefined；<br> Javascript从来不会将变量设为null。它是用来让程序员表明某个用var声明的变量时没有值的。</p>
+<p> typeof undefined<br>     //“undefined”<br>     undefined :是一个表示”无”的原始值或者说表示”缺少值”，就是此处应该有一个值，但是还没有定义。当尝试读取时会返回 undefined；<br>     例如变量被声明了，但没有赋值时，就等于undefined</p>
+<p> typeof null<br>     //“object”<br>     null : 是一个对象(空对象, 没有任何属性和方法)；<br>     例如作为函数的参数，表示该函数的参数不是对象；</p>
+<p> 注意：<br>     在验证null时，一定要使用　=== ，因为 == 无法分别 null 和　undefined<br>     null == undefined // true<br>     null === undefined // false</p>
+<p> 再来一个例子：</p>
+<pre><code>null
+Q：有张三这个人么？
+A：有！
+Q：张三有房子么？
+A：没有！
+
+undefined
+Q：有张三这个人么？
+A：有！
+Q: 张三有多少岁？
+A: 不知道（没有被告诉）
+</code></pre><h4 id="“1”-“2”-“3”-map-parseInt-答案是多少？"><a href="#“1”-“2”-“3”-map-parseInt-答案是多少？" class="headerlink" title="[“1”, “2”, “3”].map(parseInt) 答案是多少？"></a>[“1”, “2”, “3”].map(parseInt) 答案是多少？</h4><p> parseInt() 函数能解析一个字符串，并返回一个整数，需要两个参数 (val, radix)，<br> 其中 radix 表示要解析的数字的基数。【该值介于 2 ~ 36 之间，并且字符串中的数字不能大于radix才能正确返回数字结果值】;<br> 但此处 map 传了 3 个 (element, index, array),我们重写parseInt函数测试一下是否符合上面的规则。</p>
+<p> function parseInt(str, radix) {<br>     return str+’-‘+radix;<br> };<br> var a=[“1”, “2”, “3”];<br> a.map(parseInt);  // [“1-0”, “2-1”, “3-2”] 不能大于radix</p>
+<p> 因为二进制里面，没有数字3,导致出现超范围的radix赋值和不合法的进制解析，才会返回NaN<br> 所以[“1”, “2”, “3”].map(parseInt) 答案也就是：[1, NaN, NaN]</p>
+<p> 详细解析：<a href="http://blog.csdn.net/justjavac/article/details/19473199" target="_blank" rel="external">http://blog.csdn.net/justjavac/article/details/19473199</a></p>
+<h4 id="事件是？IE与火狐的事件机制有什么区别？-如何阻止冒泡？"><a href="#事件是？IE与火狐的事件机制有什么区别？-如何阻止冒泡？" class="headerlink" title="事件是？IE与火狐的事件机制有什么区别？ 如何阻止冒泡？"></a>事件是？IE与火狐的事件机制有什么区别？ 如何阻止冒泡？</h4><ol>
+<li>我们在网页中的某个操作（有的操作对应多个事件）。例如：当我们点击一个按钮就会产生一个事件。是可以被 JavaScript 侦测到的行为。</li>
+<li>事件处理机制：IE是事件冒泡、Firefox同时支持两种事件模型，也就是：捕获型事件和冒泡型事件；</li>
+<li>ev.stopPropagation();（旧ie的方法 ev.cancelBubble = true;）</li>
+</ol>
+<h4 id="是闭包（closure），为什么要用它？"><a href="#是闭包（closure），为什么要用它？" class="headerlink" title="是闭包（closure），为什么要用它？"></a>是闭包（closure），为什么要用它？</h4><p>闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量,利用闭包可以突破作用链域，将函数内部的变量和方法传递到外部。</p>
+<p>闭包的特性：</p>
+<p>1.函数内再嵌套函数<br>2.内部函数可以引用外层的参数和变量<br>3.参数和变量不会被垃圾回收机制回收</p>
+<p>//li节点的onclick事件都能正确的弹出当前被点击的li索引<br> <ul id="testUL"><br>    <li> index = 0</li><br>    <li> index = 1</li><br>    <li> index = 2</li><br>    <li> index = 3</li><br></ul></p>
+<script type="text/javascript">
+    var nodes = document.getElementsByTagName("li");
+    for(i = 0;i<nodes.length;i+= 1){
+        nodes[i].onclick = (function(i){
+                  return function() {
+                     console.log(i);
+                  } //不用闭包的话，值每次都是4
+                })(i);
+    }
+</script>
+
+
+
+<p>执行say667()后,say667()闭包内部变量会存在,而闭包内部函数的内部变量不会存在<br>使得Javascript的垃圾回收机制GC不会收回say667()所占用的资源<br>因为say667()的内部函数的执行需要依赖say667()中的变量<br>这是对闭包作用的非常直白的描述</p>
+<p>  function say667() {<br>    // Local variable that ends up within closure<br>    var num = 666;<br>    var sayAlert = function() {<br>        alert(num);<br>    }<br>    num++;<br>    return sayAlert;<br>}</p>
+<p> var sayAlert = say667();<br> sayAlert()//执行结果应该弹出的667</p>
+<h4 id="如何判断一个对象是否属于某个类？"><a href="#如何判断一个对象是否属于某个类？" class="headerlink" title="如何判断一个对象是否属于某个类？"></a>如何判断一个对象是否属于某个类？</h4><p>   使用instanceof （待完善）<br>    if(a instanceof Person){<br>        alert(‘yes’);<br>    }</p>
+<h4 id="new操作符具体干了什么呢"><a href="#new操作符具体干了什么呢" class="headerlink" title="new操作符具体干了什么呢?"></a>new操作符具体干了什么呢?</h4><p> 1、创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。<br> 2、属性和方法被加入到 this 引用的对象中。<br> 3、新创建的对象由 this 所引用，并且最后隐式的返回 this 。</p>
+<p> var obj  = {};<br> obj.<strong>proto</strong> = Base.prototype;<br> Base.call(obj);</p>
+<h4 id="JSON-的了解？"><a href="#JSON-的了解？" class="headerlink" title="JSON 的了解？"></a>JSON 的了解？</h4><p> JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。<br> 它是基于JavaScript的一个子集。数据格式简单, 易于读写, 占用带宽小<br> 如：{“age”:”12”, “name”:”back”}</p>
+<p> JSON字符串转换为JSON对象:<br> var obj =eval(‘(‘+ str +’)’);<br> var obj = str.parseJSON();<br> var obj = JSON.parse(str);</p>
+<p> JSON对象转换为JSON字符串：<br> var last=obj.toJSONString();<br> var last=JSON.stringify(obj);</p>
+<h4 id="Ajax-是什么-如何创建一个Ajax？"><a href="#Ajax-是什么-如何创建一个Ajax？" class="headerlink" title="Ajax 是什么? 如何创建一个Ajax？"></a>Ajax 是什么? 如何创建一个Ajax？</h4><p>  ajax的全称：Asynchronous Javascript And XML。<br>  异步传输+js+xml。<br>  所谓异步，在这里简单地解释就是：向服务器发送请求的时候，我们不必等待结果，而是可以同时做其他的事情，等到有了结果它自己会根据设定进行后续操作，与此同时，页面是不会发生整页刷新的，提高了用户体验。</p>
+<p>  (1)创建XMLHttpRequest对象,也就是创建一个异步调用对象<br>  (2)创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息<br>  (3)设置响应HTTP请求状态变化的函数<br>  (4)发送HTTP请求<br>  (5)获取异步调用返回的数据<br>  (6)使用JavaScript和DOM实现局部刷新</p>
+<h4 id="Ajax-解决浏览器缓存问题？"><a href="#Ajax-解决浏览器缓存问题？" class="headerlink" title="Ajax 解决浏览器缓存问题？"></a>Ajax 解决浏览器缓存问题？</h4><p>  1、在ajax发送请求前加上 anyAjaxObj.setRequestHeader(“If-Modified-Since”,”0”)。</p>
+<p>  2、在ajax发送请求前加上 anyAjaxObj.setRequestHeader(“Cache-Control”,”no-cache”)。</p>
+<p>  3、在URL后面加上一个随机数： “fresh=” + Math.random();。</p>
+<p>  4、在URL后面加上时间搓：”nowtime=” + new Date().getTime();。</p>
+<p>  5、如果是使用jQuery，直接这样就可以了 $.ajaxSetup({cache:false})。这样页面的所有ajax都会执行这条语句就是不需要保存缓存记录。</p>
+<h4 id="如何解决跨域问题"><a href="#如何解决跨域问题" class="headerlink" title="如何解决跨域问题?"></a>如何解决跨域问题?</h4><p>  jsonp、 iframe、window.name、window.postMessage、服务器上设置代理页面</p>
+<h4 id="异步加载JS的方式有哪些？"><a href="#异步加载JS的方式有哪些？" class="headerlink" title="异步加载JS的方式有哪些？"></a>异步加载JS的方式有哪些？</h4><p>   (1) defer，只支持IE</p>
+<pre><code>(2) async：
+
+(3) 创建script，插入到DOM中，加载完毕后callBack
+</code></pre><h4 id="documen-write和-innerHTML的区别"><a href="#documen-write和-innerHTML的区别" class="headerlink" title="documen.write和 innerHTML的区别"></a>documen.write和 innerHTML的区别</h4><p> document.write只能重绘整个页面</p>
+<p> innerHTML可以重绘页面的一部分</p>
+<h4 id="DOM操作——怎样添加、移除、移动、复制、创建和查找节点"><a href="#DOM操作——怎样添加、移除、移动、复制、创建和查找节点" class="headerlink" title="DOM操作——怎样添加、移除、移动、复制、创建和查找节点?"></a>DOM操作——怎样添加、移除、移动、复制、创建和查找节点?</h4><p>   1）创建新节点<br>     createDocumentFragment()    //创建一个DOM片段<br>     createElement()   //创建一个具体的元素<br>     createTextNode()   //创建一个文本节点<br>   （2）添加、移除、替换、插入<br>     appendChild()<br>     removeChild()<br>     replaceChild()<br>     insertBefore() //在已有的子节点前插入一个新的子节点<br>   （3）查找<br>     getElementsByTagName()    //通过标签名称<br>     getElementsByName()    //通过元素的Name属性的值(IE容错能力较强，会得到一个数组，其中包括id等于name值的)<br>     getElementById()    //通过元素Id，唯一性</p>
+<h4 id="http状态码有那些？分别代表是什么意思？"><a href="#http状态码有那些？分别代表是什么意思？" class="headerlink" title="http状态码有那些？分别代表是什么意思？"></a>http状态码有那些？分别代表是什么意思？</h4><pre><code>简单版
+   [
+       100  Continue   继续，一般在发送post请求时，已发送了http header之后服务端将返回此信息，表示确认，之后发送具体参数信息
+       200  OK         正常返回信息
+       201  Created    请求成功并且服务器创建了新的资源
+       202  Accepted   服务器已接受请求，但尚未处理
+       301  Moved Permanently  请求的网页已永久移动到新位置。
+       302 Found       临时性重定向。
+       303 See Other   临时性重定向，且总是使用 GET 请求新的 URI。
+       304  Not Modified 自从上次请求后，请求的网页未修改过。
+
+       400 Bad Request  服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发起请求。
+       401 Unauthorized 请求未授权。
+       403 Forbidden   禁止访问。
+       404 Not Found   找不到如何与 URI 相匹配的资源。
+
+       500 Internal Server Error  最常见的服务器端错误。
+       503 Service Unavailable 服务器端暂时无法处理请求（可能是过载或维护）。
+   ]
+
+ 完整版
+ 1**(信息类)：表示接收到请求并且继续处理
+   100——客户必须继续发出请求
+   101——客户要求服务器根据请求转换HTTP协议版本
+
+ 2**(响应成功)：表示动作被成功接收、理解和接受
+   200——表明该请求被成功地完成，所请求的资源发送回客户端
+   201——提示知道新文件的URL
+   202——接受和处理、但处理未完成
+   203——返回信息不确定或不完整
+   204——请求收到，但返回信息为空
+   205——服务器完成了请求，用户代理必须复位当前已经浏览过的文件
+   206——服务器已经完成了部分用户的GET请求
+
+ 3**(重定向类)：为了完成指定的动作，必须接受进一步处理
+   300——请求的资源可在多处得到
+   301——本网页被永久性转移到另一个URL
+   302——请求的网页被转移到一个新的地址，但客户访问仍继续通过原始URL地址，重定向，新的URL会在response中的Location中返回，浏览器将会使用新的URL发出新的Request。
+   303——建议客户访问其他URL或访问方式
+   304——自从上次请求后，请求的网页未修改过，服务器返回此响应时，不会返回网页内容，代表上次的文档已经被缓存了，还可以继续使用
+   305——请求的资源必须从服务器指定的地址得到
+   306——前一版本HTTP中使用的代码，现行版本中不再使用
+   307——申明请求的资源临时性删除
+
+ 4**(客户端错误类)：请求包含错误语法或不能正确执行
+   400——客户端请求有语法错误，不能被服务器所理解
+   401——请求未经授权，这个状态代码必须和WWW-Authenticate报头域一起使用
+   HTTP 401.1 - 未授权：登录失败
+   　　HTTP 401.2 - 未授权：服务器配置问题导致登录失败
+   　　HTTP 401.3 - ACL 禁止访问资源
+   　　HTTP 401.4 - 未授权：授权被筛选器拒绝
+   HTTP 401.5 - 未授权：ISAPI 或 CGI 授权失败
+   402——保留有效ChargeTo头响应
+   403——禁止访问，服务器收到请求，但是拒绝提供服务
+   HTTP 403.1 禁止访问：禁止可执行访问
+   　　HTTP 403.2 - 禁止访问：禁止读访问
+   　　HTTP 403.3 - 禁止访问：禁止写访问
+   　　HTTP 403.4 - 禁止访问：要求 SSL
+   　　HTTP 403.5 - 禁止访问：要求 SSL 128
+   　　HTTP 403.6 - 禁止访问：IP 地址被拒绝
+   　　HTTP 403.7 - 禁止访问：要求客户证书
+   　　HTTP 403.8 - 禁止访问：禁止站点访问
+   　　HTTP 403.9 - 禁止访问：连接的用户过多
+   　　HTTP 403.10 - 禁止访问：配置无效
+   　　HTTP 403.11 - 禁止访问：密码更改
+   　　HTTP 403.12 - 禁止访问：映射器拒绝访问
+   　　HTTP 403.13 - 禁止访问：客户证书已被吊销
+   　　HTTP 403.15 - 禁止访问：客户访问许可过多
+   　　HTTP 403.16 - 禁止访问：客户证书不可信或者无效
+   HTTP 403.17 - 禁止访问：客户证书已经到期或者尚未生效
+   404——一个404错误表明可连接服务器，但服务器无法取得所请求的网页，请求资源不存在。eg：输入了错误的URL
+   405——用户在Request-Line字段定义的方法不允许
+   406——根据用户发送的Accept拖，请求资源不可访问
+   407——类似401，用户必须首先在代理服务器上得到授权
+   408——客户端没有在用户指定的饿时间内完成请求
+   409——对当前资源状态，请求不能完成
+   410——服务器上不再有此资源且无进一步的参考地址
+   411——服务器拒绝用户定义的Content-Length属性请求
+   412——一个或多个请求头字段在当前请求中错误
+   413——请求的资源大于服务器允许的大小
+   414——请求的资源URL长于服务器允许的长度
+   415——请求资源不支持请求项目格式
+   416——请求中包含Range请求头字段，在当前请求资源范围内没有range指示值，请求也不包含If-Range请求头字段
+   417——服务器不满足请求Expect头字段指定的期望值，如果是代理服务器，可能是下一级服务器不能满足请求长。
+
+ 5**(服务端错误类)：服务器不能正确执行一个正确的请求
+   HTTP 500 - 服务器遇到错误，无法完成请求
+   　　HTTP 500.100 - 内部服务器错误 - ASP 错误
+   　　HTTP 500-11 服务器关闭
+   　　HTTP 500-12 应用程序重新启动
+   　　HTTP 500-13 - 服务器太忙
+   　　HTTP 500-14 - 应用程序无效
+   　　HTTP 500-15 - 不允许请求 global.asa
+   　　Error 501 - 未实现
+ HTTP 502 - 网关错误
+ HTTP 503：由于超载或停机维护，服务器目前无法使用，一段时间后可能恢复正常
+```
+
+#### 对前端工程师这个职位是怎么样理解的？它的前景会怎么样？
+前端是最贴近用户的程序员，比后端、数据库、产品经理、运营、安全都近。
+1、实现界面交互
+2、提升用户体验
+3、有了Node.js，前端可以实现服务端的一些事情
+
+
+前端是最贴近用户的程序员，前端的能力就是能让产品从 90分进化到 100 分，甚至更好，
+
+参与项目，快速高质量完成实现效果图，精确到1px；
+
+与团队成员，UI设计，产品经理的沟通；
+
+做好的页面结构，页面重构和用户体验；
+
+处理hack，兼容、写出优美的代码格式；
+
+针对服务器的优化、拥抱最新前端技术。
+
+ #### 平时如何管理你的项目？
+ 先期团队必须确定好全局样式（globe.css），编码模式(utf-8) 等；
+
+ 编写习惯必须一致（例如都是采用继承式的写法，单样式都写成一行）；
+
+ 标注样式编写人，各模块都及时标注（标注关键样式调用的地方）；
+
+ 页面进行标注（例如 页面 模块 开始和结束）；
+
+ CSS跟HTML 分文件夹并行存放，命名都得统一（例如style.css）；
+
+ JS 分文件夹存放 命名以该JS功能为准的英文翻译。
+
+ 图片采用整合的 images.png png8 格式文件使用 尽量整合在一起使用方便将来的管理
+
+ #### 前端学习网站推荐
+ 1. 极客标签：     http://www.gbtags.com/
+
+ 2. 码农周刊：     http://weekly.manong.io/issues/
+
+ 3. 前端周刊：     http://www.feweekly.com/issues
+
+ 4. 慕课网：       http://www.imooc.com/
+
+ 5. div.io：         http://div.io
+
+ 6. Hacker News： https://news.ycombinator.com/news
+
+ 7. InfoQ：       http://www.infoq.com/
+
+ 8. w3cplus：     http://www.w3cplus.com/
+
+ 9. Stack Overflow： http://stackoverflow.com/
+
+ 10.w3school：    http://www.w3school.com.cn/
+
+ 11.mozilla：     https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
+</code></pre>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/09/前端面试题/" class="archive-article-date">
+  	<time datetime="2016-12-09T13:34:53.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-09</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/12/09/data/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          data
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/12/05/vue/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="post-前端面试题" data-title="前端面试题" data-url="http://yoursite.com/2016/12/09/前端面试题/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"yinxiaoqiang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Xiaoqiang Yin
+    	</div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/js/" style="font-size: 10px;">js</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://3241746995.github.io/">王敏</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://wjydc.github.io/">魏娇</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://jasonellen.github.io/">张南南</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://zjflove.github.io/">章江锋</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://yaomengyyu.github.io/">刘家浩</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/litten/hexo-theme-yilia">litten</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;&lt;br&gt;我会继续努力&lt;br&gt;&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

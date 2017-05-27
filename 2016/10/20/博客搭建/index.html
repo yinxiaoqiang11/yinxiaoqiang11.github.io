@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>Mac OS 博客搭建 | 殷孝强</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="准备阶段1 配置git环境2 创建node环境
+配置git环境创建代码库1 百度搜索github官网注册一个账号,如果已注册过的就无需再注册2 Sign in(登陆) Sign up(注册),点击注册,注册完之后去往自己刚填写的邮箱确认注册,结束注册流程3 登陆自己的github账号,点击这个加号,选择第一个New repository:4 下一步填写信息
+
+注意:您起的Repository na">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac OS 博客搭建">
+<meta property="og:url" content="http://yoursite.com/2016/10/20/博客搭建/index.html">
+<meta property="og:site_name" content="殷孝强">
+<meta property="og:description" content="准备阶段1 配置git环境2 创建node环境
+配置git环境创建代码库1 百度搜索github官网注册一个账号,如果已注册过的就无需再注册2 Sign in(登陆) Sign up(注册),点击注册,注册完之后去往自己刚填写的邮箱确认注册,结束注册流程3 登陆自己的github账号,点击这个加号,选择第一个New repository:4 下一步填写信息
+
+注意:您起的Repository na">
+<meta property="og:image" content="http://a2.qpic.cn/psb?/V13aGJix1tfTvq/FfLzCs.6okZAPRdkXwrMj5kyNyolEYk3S56ba0h*3CM!/m/dAkBAAAAAAAAnull&bo=ZgXPAAAAAAADB44!&rf=photolist&t=5">
+<meta property="og:image" content="http://a3.qpic.cn/psb?/V13aGJix1tfTvq/v0awBpp1eFY4PdmLs*HUlOaDxp91C4qkBHtVAUiw.CE!/m/dAoBAAAAAAAAnull&bo=sQSAAgAAAAADBxU!&rf=photolist&t=5">
+<meta property="og:image" content="http://a2.qpic.cn/psb?/V13aGJix1tfTvq/hH3pj9SBoPdzEhN*T5E5M193OJ0igsOXo9j6XVV9*Vo!/m/dAkBAAAAAAAAnull&bo=WwKpAgAAAAADB9A!&rf=photolist&t=5">
+<meta property="og:image" content="http://a4.qpic.cn/psb?/V13aGJix1tfTvq/CePIJq8M.D4LHGYOQt.E44RmHXmhJmEer0pbIGK7KvU!/m/dHcBAAAAAAAAnull&bo=8gEdAAAAAAADB8w!&rf=photolist&t=5">
+<meta property="og:image" content="http://a3.qpic.cn/psb?/V13aGJix1tfTvq/7sDIb78G*AlmOy4v.C3AGqjd97jKSiriyRvu9P7OU.Y!/m/dAoBAAAAAAAAnull&bo=5wKfAQAAAAADB1k!&rf=photolist&t=5">
+<meta property="og:updated_time" content="2016-11-16T03:59:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mac OS 博客搭建">
+<meta name="twitter:description" content="准备阶段1 配置git环境2 创建node环境
+配置git环境创建代码库1 百度搜索github官网注册一个账号,如果已注册过的就无需再注册2 Sign in(登陆) Sign up(注册),点击注册,注册完之后去往自己刚填写的邮箱确认注册,结束注册流程3 登陆自己的github账号,点击这个加号,选择第一个New repository:4 下一步填写信息
+
+注意:您起的Repository na">
+<meta name="twitter:image" content="http://a2.qpic.cn/psb?/V13aGJix1tfTvq/FfLzCs.6okZAPRdkXwrMj5kyNyolEYk3S56ba0h*3CM!/m/dAkBAAAAAAAAnull&bo=ZgXPAAAAAAADB44!&rf=photolist&t=5">
+  
+    <link rel="alternative" href="/atom.xml" title="殷孝强" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://h.hiphotos.baidu.com/image/pic/item/8694a4c27d1ed21b61797af2ae6eddc451da3f70.jpg">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="http://img3.imgtn.bdimg.com/it/u=1920956503,1400511548&amp;fm=21&amp;gp=0.jpg" class="js-avatar show">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Xiaoqiang Yin</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">xiao Yin</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">我的主页</a></li>
+	        
+				<li><a href="/">我的随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/yinxiaoqiang11" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Xiaoqiang Yin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="http://img3.imgtn.bdimg.com/it/u=1920956503,1400511548&amp;fm=21&amp;gp=0.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Xiaoqiang Yin</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">xiao Yin</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">我的主页</a></li>
+		        
+					<li><a href="/">我的随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/yinxiaoqiang11" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-博客搭建" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Mac OS 博客搭建
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h3><p>1 配置git环境<br>2 创建node环境</p>
+<h3 id="配置git环境"><a href="#配置git环境" class="headerlink" title="配置git环境"></a>配置git环境</h3><h4 id="创建代码库"><a href="#创建代码库" class="headerlink" title="创建代码库"></a>创建代码库</h4><p>1 百度搜索<a href="https://github.com/" target="_blank" rel="external">github官网</a>注册一个账号,如果已注册过的就无需再注册<br>2 Sign in(登陆) Sign up(注册),点击注册,注册完之后去往自己刚填写的邮箱确认注册,结束注册流程<br>3 登陆自己的github账号,点击这个加号,选择第一个New repository:<br><img src="http://a2.qpic.cn/psb?/V13aGJix1tfTvq/FfLzCs.6okZAPRdkXwrMj5kyNyolEYk3S56ba0h*3CM!/m/dAkBAAAAAAAAnull&amp;bo=ZgXPAAAAAAADB44!&amp;rf=photolist&amp;t=5" alt=""><br>4 下一步填写信息</p>
+<ul>
+<li>注意:您起的Repository name须和你前面的名字一样再加上.github.io为后缀名,最后点击Create repository完成创建<br><img src="http://a3.qpic.cn/psb?/V13aGJix1tfTvq/v0awBpp1eFY4PdmLs*HUlOaDxp91C4qkBHtVAUiw.CE!/m/dAoBAAAAAAAAnull&amp;bo=sQSAAgAAAAADBxU!&amp;rf=photolist&amp;t=5" alt=""><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><h4 id="在自己觉得合适的地方创建一个文件夹-比如myblog文件夹"><a href="#在自己觉得合适的地方创建一个文件夹-比如myblog文件夹" class="headerlink" title="在自己觉得合适的地方创建一个文件夹,比如myblog文件夹"></a>在自己觉得合适的地方创建一个文件夹,比如myblog文件夹</h4>1 然后打开终端,执行<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install hexo-cli -g</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>然后你会看到这个界面</p>
+<p><img src="http://a2.qpic.cn/psb?/V13aGJix1tfTvq/hH3pj9SBoPdzEhN*T5E5M193OJ0igsOXo9j6XVV9*Vo!/m/dAkBAAAAAAAAnull&amp;bo=WwKpAgAAAAADB9A!&amp;rf=photolist&amp;t=5" alt=""><br>表示你已经安装成功了<br>2 执行,找到你新建的文件夹myblog,<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ cd myblog</div><div class="line">$ hexo init</div><div class="line">$ npm install</div><div class="line">$ hexo serve</div></pre></td></tr></table></figure></p>
+<p>然后你会看到这个界面,表明你的博客已经搭建好了<br><img src="http://a4.qpic.cn/psb?/V13aGJix1tfTvq/CePIJq8M.D4LHGYOQt.E44RmHXmhJmEer0pbIGK7KvU!/m/dHcBAAAAAAAAnull&amp;bo=8gEdAAAAAAADB8w!&amp;rf=photolist&amp;t=5" alt=""><br>复制上面的网址在浏览器运行,出现以下界面表示你已经成功搭建属于自己的博客了<br><img src="http://a3.qpic.cn/psb?/V13aGJix1tfTvq/7sDIb78G*AlmOy4v.C3AGqjd97jKSiriyRvu9P7OU.Y!/m/dAoBAAAAAAAAnull&amp;bo=5wKfAQAAAAADB1k!&amp;rf=photolist&amp;t=5" alt=""></p>
+<p>3 博客搭建好了之后就是上传到你的github了,首先我们先找到文件夹下面最外层的_config.yml文件,修改如下界面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: 这里为你的github域名仓库的Https地址</div></pre></td></tr></table></figure></p>
+<p>4 执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure></p>
+<p>下次修改博客之后只需<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d</div></pre></td></tr></table></figure></p>
+<p>就好了,是不是很方便啊</p>
+<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><ul>
+<li>搜索到自己喜欢的主题,可以通过以下方式更换为自己的主题<br>1 复制你的主题所在github的域名仓库的Https地址,利用终端找到自己所建文件夹下的themes文件夹目录下<br>2 执行<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone 主题的域名仓库地址</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>3 再到文件夹下最外层的_config.yml文件夹下修改默认的主题theme,就可以更换为自己想要的主题了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: 您的新主题的名字</div></pre></td></tr></table></figure></p>
+<h3 id="多说评论"><a href="#多说评论" class="headerlink" title="多说评论"></a>多说评论</h3><p>1 创建多说账号</p>
+<ul>
+<li>进入<a href="http://duoshuo.com" target="_blank" rel="external">多说</a>官网<a href="http://duoshuo.com" target="_blank" rel="external">http://duoshuo.com</a>,点击我要安装,填写相关信息注册好之后,这就说明你已有多说账号了</li>
+<li>多说账号准备好之后,,找到相应主题下面的layout下面的_partial文件下面的post文件下的article.ejs文件</li>
+<li><p>复制以下代码至article.ejs</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">把最后一段这个代码</div><div class="line">&lt;!-- 多说评论框 start --&gt;</div><div class="line">	&lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;&quot; data-title=&quot;&lt;%= post.title %&gt;&quot; data-url=&quot;&lt;%= page.permalink %&gt;&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;!-- 多说评论框 end --&gt;</div><div class="line">&lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">var duoshuoQuery = &#123;short_name:&quot;您的多说域名名字&quot;&#125;;</div><div class="line">	(function() &#123;</div><div class="line">		var ds = document.createElement(&apos;script&apos;);</div><div class="line">		ds.type = &apos;text/javascript&apos;;ds.async = true;</div><div class="line">		ds.src = (document.location.protocol == &apos;https:&apos; ? &apos;https:&apos; : &apos;http:&apos;) + &apos;//static.duoshuo.com/embed.js&apos;;</div><div class="line">		ds.charset = &apos;UTF-8&apos;;</div><div class="line">		(document.getElementsByTagName(&apos;head&apos;)[0]</div><div class="line">		 || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(ds);</div><div class="line">	&#125;)();</div><div class="line">	&lt;/script&gt;</div><div class="line">&lt;!-- 多说公共JS代码 end --&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>最后一步可至最外层的那个_config.yml文件,增加一个属性,注意此处有坑,我当时也是搞了几遍才好的,比如你的多说站点为xxx.duoshuo.com, 此时xxx才是您的真正的多说名字,您只要填入下面xxx就OK了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">duoshuo_shortname: 您的多说名字</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>至此一步就大功告成了,很幸运你已经拥有一个属于自己的评论系统了</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/10/20/博客搭建/" class="archive-article-date">
+  	<time datetime="2016-10-20T10:49:27.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-20</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/11/16/Express/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Express和Mongodb安装
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Canvas画布之实现百球大战</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="post-博客搭建" data-title="Mac OS 博客搭建" data-url="http://yoursite.com/2016/10/20/博客搭建/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"yinxiaoqiang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Xiaoqiang Yin
+    	</div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/js/" style="font-size: 10px;">js</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://3241746995.github.io/">王敏</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://wjydc.github.io/">魏娇</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://jasonellen.github.io/">张南南</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://zjflove.github.io/">章江锋</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://yaomengyyu.github.io/">刘家浩</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/litten/hexo-theme-yilia">litten</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;&lt;br&gt;我会继续努力&lt;br&gt;&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>Canvas画布之实现百球大战 | 殷孝强</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="这一次我们来实现一个百球大战的效果,一百个球在canavs画布中来回弹跳,是不是觉得非常有趣呢,相信各位已经迫不及待想看它是怎么实现的吧!话不多说,开始吧。
+Quick StartCreate a new html1234567891011121314&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;    &amp;lt;meta charse">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Canvas画布之实现百球大战">
+<meta property="og:url" content="http://yoursite.com/2016/10/12/hello-world/index.html">
+<meta property="og:site_name" content="殷孝强">
+<meta property="og:description" content="这一次我们来实现一个百球大战的效果,一百个球在canavs画布中来回弹跳,是不是觉得非常有趣呢,相信各位已经迫不及待想看它是怎么实现的吧!话不多说,开始吧。
+Quick StartCreate a new html1234567891011121314&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;    &amp;lt;meta charse">
+<meta property="og:updated_time" content="2016-11-16T03:59:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Canvas画布之实现百球大战">
+<meta name="twitter:description" content="这一次我们来实现一个百球大战的效果,一百个球在canavs画布中来回弹跳,是不是觉得非常有趣呢,相信各位已经迫不及待想看它是怎么实现的吧!话不多说,开始吧。
+Quick StartCreate a new html1234567891011121314&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&amp;lt;head&amp;gt;    &amp;lt;meta charse">
+  
+    <link rel="alternative" href="/atom.xml" title="殷孝强" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://h.hiphotos.baidu.com/image/pic/item/8694a4c27d1ed21b61797af2ae6eddc451da3f70.jpg">
+  
+  <link rel="stylesheet" href="/main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="http://img3.imgtn.bdimg.com/it/u=1920956503,1400511548&amp;fm=21&amp;gp=0.jpg" class="js-avatar show">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Xiaoqiang Yin</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">xiao Yin</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">我的主页</a></li>
+	        
+				<li><a href="/">我的随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友链</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/yinxiaoqiang11" title="github">github</a>
+		        
+			</div>
+		</nav>
+	</header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-list"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Xiaoqiang Yin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="http://img3.imgtn.bdimg.com/it/u=1920956503,1400511548&amp;fm=21&amp;gp=0.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Xiaoqiang Yin</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">xiao Yin</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">我的主页</a></li>
+		        
+					<li><a href="/">我的随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/yinxiaoqiang11" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Canvas画布之实现百球大战
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这一次我们来实现一个百球大战的效果,一百个球在<a href="http://www.runoob.com/html/html5-canvas.html" target="_blank" rel="external">canavs</a>画布中来回弹跳,是不是觉得非常有趣呢,<br>相信各位已经迫不及待想看它是怎么实现的吧!话不多说,开始吧。</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-html"><a href="#Create-a-new-html" class="headerlink" title="Create a new html"></a>Create a new html</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;百球大战&lt;/title&gt;</div><div class="line">    &lt;link rel=<span class="string">"stylesheet"</span> <span class="built_in">type</span>=<span class="string">"text/css"</span> href=<span class="string">"index.css"</span>&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;canvas id=<span class="string">"canvas"</span>&gt;</div><div class="line">         您的浏览器不支持canvas,请更换主流浏览器</div><div class="line">    &lt;/canvas&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;script src=<span class="string">"index.js&gt;&lt;/script&gt;</span></div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h3 id="Create-a-new-index-css"><a href="#Create-a-new-index-css" class="headerlink" title="Create a new index.css"></a>Create a new index.css</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">*&#123;</div><div class="line">    margin:0;</div><div class="line">    padding:0;</div><div class="line">&#125;</div><div class="line"><span class="comment">#canvas&#123;</span></div><div class="line">    display: block;</div><div class="line">    margin:0 auto;</div><div class="line">    border:1px red solid;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Create-a-new-index-js"><a href="#Create-a-new-index-js" class="headerlink" title="Create a new index.js"></a>Create a new index.js</h3><h4 id="这里才是这段程序的难点-这里我们采用构造函数的方式来编写"><a href="#这里才是这段程序的难点-这里我们采用构造函数的方式来编写" class="headerlink" title="这里才是这段程序的难点,这里我们采用构造函数的方式来编写"></a>这里才是这段程序的难点,这里我们采用构造函数的方式来编写</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line">  var canvas = document.querySelector(&quot;#canvas&quot;);</div><div class="line">        canvas.width = 800;</div><div class="line">        canvas.height = 600;</div><div class="line">        var onOff = false;</div><div class="line">        var ctx = canvas.getContext(&quot;2d&quot;);</div><div class="line">        function Arc()&#123;</div><div class="line">            this.x = x;</div><div class="line">            this.y = y;</div><div class="line">            this.r = r;</div><div class="line">            this.color = color;</div><div class="line">            this.speedX = speedX;</div><div class="line">            this.speedY = speedY;</div><div class="line">        &#125;</div><div class="line">        Arc.prototype.drawArc = function()&#123;</div><div class="line">            ctx.save();</div><div class="line">            ctx.beginPath();</div><div class="line">            ctx.fillStyle = this.color;</div><div class="line">            ctx.arc(this.x,this.y,this.r,0,Math.PI*2)</div><div class="line">            ctx.fill();</div><div class="line">            ctx.closePath();</div><div class="line">            ctx.restore();</div><div class="line">        &#125;</div><div class="line">        Arc.prototype.move = function()&#123;</div><div class="line">            if(this.x+this.speedX+this.r &gt; canvas.width || this.x+this.speedX-this.r &lt; 0)&#123;</div><div class="line">                this.speedX = -this.speedX;</div><div class="line">            &#125;</div><div class="line">            if(this.y+this.speedY+this.r &gt; canvas.height || this.y+this.speedY-this.r &lt; 0)&#123;</div><div class="line"></div><div class="line">                this.speedY = - this.speedY;</div><div class="line">            &#125;</div><div class="line">            this.x += this.speedX;</div><div class="line">            this.y += this.speedY;</div><div class="line">        &#125;</div><div class="line">        var arr = [];</div><div class="line">        for(var i = 0;i&lt;100;i++)&#123;</div><div class="line">           var x = random(50,750);</div><div class="line">           var y = random(50,550);</div><div class="line">           var r = random(10,30);</div><div class="line">           var speedX = random(3,10);</div><div class="line">           var speedY = random(3,10);</div><div class="line">           //ES6写法</div><div class="line">           var color = `rgb($&#123;random(0,255)&#125;,$&#123;random(0,255)&#125;,$&#123;random(0,255)&#125;)`;</div><div class="line">//   ES5写法 var color = &quot;rgb(&quot;+random(0,255)+&quot;,&quot;+random(0,255)+&quot;,&quot;+random(0,255)+&quot;)&quot;;</div><div class="line">           var obj = new Arc(x,y,r,color,speedX,speedY)</div><div class="line">            arr.push(obj);</div><div class="line">        &#125;</div><div class="line">        var timer = null;</div><div class="line">        function ani()&#123;</div><div class="line">            ctx.clearRect(0,0,canvas.width,canvas.height)</div><div class="line">            for(var i = 0;i&lt;arr.length;i++)&#123;</div><div class="line">                arr[i].drawArc();</div><div class="line">                arr[i].move();</div><div class="line">            &#125;</div><div class="line">            timer = window.requestAnimationFrame(ani);</div><div class="line">        &#125;</div><div class="line">        ani();</div><div class="line">        document.onclick = function()&#123;</div><div class="line">            onOff = !onOff;</div><div class="line">            if(onOff)&#123;</div><div class="line">                window.cancelAnimationFrame(timer);</div><div class="line">            &#125;else&#123;</div><div class="line">                ani();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        function random(a,b)&#123;</div><div class="line">            return Math.ceil(Math.random() * (b-a)+a+1);</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意:"></a>注意:</h3><h5 id="canvas的宽高-要在行间或这js里面书写-不要在css样式里面写-在css里设置宽高是对内容设置的-相反则是canvas的宽高-请参考网址"><a href="#canvas的宽高-要在行间或这js里面书写-不要在css样式里面写-在css里设置宽高是对内容设置的-相反则是canvas的宽高-请参考网址" class="headerlink" title="canvas的宽高,要在行间或这js里面书写,不要在css样式里面写,在css里设置宽高是对内容设置的,相反则是canvas的宽高;请参考网址"></a>canvas的宽高,要在行间或这js里面书写,不要在css样式里面写,在css里设置宽高是对内容设置的,相反则是canvas的宽高;请参考<a href="http://www.tuicool.com/articles/qMnAjm" target="_blank" rel="external">网址</a></h5><h3 id="如果对构造函数不熟的同学可以参考这一篇博客"><a href="#如果对构造函数不熟的同学可以参考这一篇博客" class="headerlink" title="如果对构造函数不熟的同学可以参考这一篇博客"></a>如果对构造函数不熟的同学可以参考这一篇<a href="http://www.51xuediannao.com/javascript/jsgzhssljj_862.html" target="_blank" rel="external">博客</a></h3><ul>
+<li>喜欢就点个赞吧</li>
+</ul>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/10/12/hello-world/" class="archive-article-date">
+  	<time datetime="2016-10-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-12</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas/">canvas</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-price-tags"></i>
+	<a class="article-category-link" href="/categories/html-javascript/">html javascript</a>
+	</div>
+
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2016/10/20/博客搭建/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Mac OS 博客搭建
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="post-hello-world" data-title="Canvas画布之实现百球大战" data-url="http://yoursite.com/2016/10/12/hello-world/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"yinxiaoqiang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Xiaoqiang Yin
+    	</div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/js/" style="font-size: 10px;">js</a>
+    			</div>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://3241746995.github.io/">王敏</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://wjydc.github.io/">魏娇</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://jasonellen.github.io/">张南南</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://zjflove.github.io/">章江锋</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://yaomengyyu.github.io/">刘家浩</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/litten/hexo-theme-yilia">litten</a>
+  	        
+  	        </div>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;&lt;br&gt;我会继续努力&lt;br&gt;&lt;br&gt;谢谢大家</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
