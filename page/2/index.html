@@ -131,6 +131,72 @@
       <div class="body-wrap">
         
   
+    <article id="post-折角" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/14/折角/">折角</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本次效果展示主要是通过伪类来实现,效果还不错,感兴趣的同学可以尝试一下</p>
+<p>css部分<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div></pre></td><td class="code"><pre><div class="line">&lt;style&gt;</div><div class="line">			*&#123;</div><div class="line">				margin: 0px;</div><div class="line">				padding: 0px;</div><div class="line">				text-decoration: none;</div><div class="line">			&#125;</div><div class="line">			body&#123;</div><div class="line">				background-color: silver;</div><div class="line">				padding: 50px 0 0;</div><div class="line">				text-align:center;</div><div class="line">			&#125;</div><div class="line">			.ribbon &#123;</div><div class="line">				width: 430px;</div><div class="line">				margin: 0px auto;</div><div class="line">				overflow: hidden;</div><div class="line">			&#125;</div><div class="line">			/*左边*/</div><div class="line">			.ribbon:before&#123;</div><div class="line">				content: &quot;&quot;;</div><div class="line">				float: left;</div><div class="line">				/*设置margin-top是为了和a里面的span在同一行*/</div><div class="line">				margin-top: 8px;</div><div class="line">				border: 24px solid #fff;</div><div class="line">				border-left-color: transparent;</div><div class="line">			&#125;</div><div class="line">			/*右边*/</div><div class="line">			.ribbon:after&#123;</div><div class="line">				content: &quot;&quot;;</div><div class="line">				float: left;</div><div class="line">				margin-top: 8px;</div><div class="line">				border: 24px solid #fff;</div><div class="line">				border-right-color: transparent;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			.ribbon a&#123;</div><div class="line">			    float: left;</div><div class="line">			    /*为hover有突出效果,所以设置的高度要比两边的高*/</div><div class="line">			    height: 56px;</div><div class="line">				color: #000;</div><div class="line">				overflow: hidden;</div><div class="line">			&#125;</div><div class="line">			.ribbon span&#123;</div><div class="line">				display: block;</div><div class="line">				background-color: #fff;</div><div class="line">				line-height: 48px;</div><div class="line">				padding: 0px 17px;</div><div class="line">				margin-top: 8px;</div><div class="line">				position: relative;</div><div class="line">				font-family: HUM521L,serif;</div><div class="line">				font-size: 17px;</div><div class="line"></div><div class="line">				transition: background-color 0.2s, margin-top 0.2s;</div><div class="line">			&#125;</div><div class="line">			.ribbon a:hover span&#123;</div><div class="line">				background: #FFD204;</div><div class="line">				margin-top: 0;</div><div class="line">			&#125;</div><div class="line">			.ribbon span:before&#123;</div><div class="line">				content: &quot;&quot;;</div><div class="line">				float: left;</div><div class="line">				position: absolute;</div><div class="line">				top: 48px;</div><div class="line">				left: 0px;</div><div class="line">				border-right: 8px solid #9B8651;</div><div class="line">				border-bottom: 8px solid #fff;</div><div class="line">			&#125;</div><div class="line">			.ribbon span:after&#123;</div><div class="line">				content: &quot;&quot;;</div><div class="line">				float: left;</div><div class="line">				position: absolute;</div><div class="line">				top: 48px;</div><div class="line">				right: 0px;</div><div class="line">				border-left: 8px solid #9B8651;</div><div class="line">				border-bottom: 8px solid #fff;</div><div class="line">			&#125;</div><div class="line"></div><div class="line"></div><div class="line">		&lt;/style&gt;</div></pre></td></tr></table></figure></p>
+<p>主体部分很简单</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;ribbon&quot;&gt;</div><div class="line">    &lt;a href=&quot;##&quot;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;</div><div class="line">    &lt;a href=&quot;##&quot;&gt;&lt;span&gt;About&lt;/span&gt;&lt;/a&gt;</div><div class="line">    &lt;a href=&quot;##&quot;&gt;&lt;span&gt;Services&lt;/span&gt;&lt;/a&gt;</div><div class="line">    &lt;a href=&quot;##&quot;&gt;&lt;span&gt;Contact&lt;/span&gt;&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/12/14/折角/" class="archive-article-date">
+  	<time datetime="2016-12-14T01:53:57.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-14</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="post-折角" data-title="折角" data-url="undefined"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"yinxiaoqiang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+  
     <article id="post-烟花" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1232,89 +1298,6 @@ A: 不知道（没有被告诉）
 
 <!-- 多说评论框 start -->
 <div class="ds-thread" data-thread-key="post-img加载" data-title="img加载" data-url="undefined"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-  var duoshuoQuery = {short_name:"yinxiaoqiang"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0]
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-</script>
-<!-- 多说公共JS代码 end -->
-
-  
-    <article id="post-Express" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/16/Express/">Express和Mongodb安装</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Express安装"><a href="#Express安装" class="headerlink" title="Express安装"></a>Express安装</h3><p>首先你是安装了<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>的基础上,在你觉得合适的地方创建一个应用目录,然后进入此目录作为当前目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ mkdir myapp</div><div class="line">$ cd myapp</div><div class="line">$ npm init(此过程会要输入几个参数,我们一般不改,直接回车即可)</div><div class="line">$ npm install express --save</div></pre></td></tr></table></figure></p>
-<p>接下来创建一个应用的骨架<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install express-generator -g</div></pre></td></tr></table></figure></p>
-<p>我们可以创建一个命名为Express的应用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ express -e -c less Express</div><div class="line">$ cd Express</div><div class="line">$ npm install</div></pre></td></tr></table></figure></p>
-<p>启动这个运用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm start</div></pre></td></tr></table></figure></p>
-<p>然后在浏览器中打开 <a href="http://localhost:3000/" target="_blank" rel="external">http://localhost:3000/</a> 网址就可以看到这个应用了</p>
-<h3 id="Mongodb安装"><a href="#Mongodb安装" class="headerlink" title="Mongodb安装"></a>Mongodb安装</h3><p>准备阶段,首先需把我们所要的环境配置好,你们可至<a href="https://github.com/yinxiaoqiang11/mongod" target="_blank" rel="external">我的github账号</a>进行下载到本地<br>然后执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mv -n ~/Downloads/mongodb-osx-x86_64-3.2.9 ~/Applications/mongodb/(注意路径哦,执行此步所下载的文件是看不见的)</div></pre></td></tr></table></figure></p>
-<p>下一步重新打开终端,在根目录下输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sudo mkdir -p /data/db</div><div class="line">$ sudo chown -R  yonghuming /data(注意这里为自己的用户名,用户名后面必须有空格隔开)</div></pre></td></tr></table></figure></p>
-<p>然后再回到根目录下直接执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cd Users/lanou/Applications/mongodb/bin</div></pre></td></tr></table></figure></p>
-<p>您也可以通过终端往下找到此路径的bin文件夹,只不过有点繁琐一些,然后回车执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ./mongod</div></pre></td></tr></table></figure></p>
-<p>下一步打开另一个终端,再次到bin文件下,回车,输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ./mongo</div></pre></td></tr></table></figure></p>
-<h3 id="Mongodb非常实用的命令"><a href="#Mongodb非常实用的命令" class="headerlink" title="Mongodb非常实用的命令"></a>Mongodb非常实用的命令</h3><p>查看所有数据库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ show dbs</div></pre></td></tr></table></figure></p>
-<p>创建数据库,如果已有当前的数据库,会自动切换到当前数据库,如果没有,则会创建一个数据库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ use 数据库名</div></pre></td></tr></table></figure></p>
-<p>查看当前所连接的db<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ db</div></pre></td></tr></table></figure></p>
-<p>删除数据库,进入所要删除的数据库,执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ db.dropDatabase()</div></pre></td></tr></table></figure></p>
-<p>插入数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ db.集合名称.insert(&#123;&#125;)</div></pre></td></tr></table></figure></p>
-<p>更新操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.user.updata(&quot;目标&quot;,&quot;更新内容&quot;)</div></pre></td></tr></table></figure></p>
-<p>查找当前集合下的所有数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.user.find()</div></pre></td></tr></table></figure></p>
-<p>查找当前集合的第一条数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.user.findOne()</div></pre></td></tr></table></figure></p>
-<p>移除目标,此操作会把目标的所有数据删除掉<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.user.remove(&#123;目标&#125;)</div></pre></td></tr></table></figure></p>
-<p>删除集合<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.集合名称.drop()</div></pre></td></tr></table></figure></p>
-<p>drop()和remove()区别<br>    remove用于将集合中的文档删除，但不删除集合本身，也不删除集合的索引。<br>    drop不仅删除集合的文档，也会删除集合本身，同时也会删除在集合上创建的索引。</p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/11/16/Express/" class="archive-article-date">
-  	<time datetime="2016-11-16T01:57:53.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-16</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-
-<!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="post-Express" data-title="Express和Mongodb安装" data-url="undefined"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

@@ -6,14 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 殷孝强</title>
+  <title>git远程仓库管理 | 殷孝强</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="殷孝强">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="今天总结一下git远程仓库管理：
+1.创建远程仓库首先去码云上注册一个账号，依次执行创建组织-&amp;gt;创建项目
+2.配置SSH密钥一 、设置Git的user name和email：12$ git config --global user.name &amp;quot;您的github名字&amp;quot;$ git config --global user.email &amp;quot;您的邮箱&amp;quot;
+二、生成">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git远程仓库管理">
+<meta property="og:url" content="http://yoursite.com/2017/07/07/git远程仓库管理/index.html">
 <meta property="og:site_name" content="殷孝强">
+<meta property="og:description" content="今天总结一下git远程仓库管理：
+1.创建远程仓库首先去码云上注册一个账号，依次执行创建组织-&amp;gt;创建项目
+2.配置SSH密钥一 、设置Git的user name和email：12$ git config --global user.name &amp;quot;您的github名字&amp;quot;$ git config --global user.email &amp;quot;您的邮箱&amp;quot;
+二、生成">
+<meta property="og:updated_time" content="2017-07-07T04:36:31.938Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="殷孝强">
+<meta name="twitter:title" content="git远程仓库管理">
+<meta name="twitter:description" content="今天总结一下git远程仓库管理：
+1.创建远程仓库首先去码云上注册一个账号，依次执行创建组织-&amp;gt;创建项目
+2.配置SSH密钥一 、设置Git的user name和email：12$ git config --global user.name &amp;quot;您的github名字&amp;quot;$ git config --global user.email &amp;quot;您的邮箱&amp;quot;
+二、生成">
   
     <link rel="alternative" href="/atom.xml" title="殷孝强" type="application/atom+xml">
   
@@ -129,302 +142,95 @@
 </nav>
 
       <div class="body-wrap">
+        <article id="post-git远程仓库管理" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
         
   
+    <h1 class="article-title" itemprop="name">
+      git远程仓库管理
+    </h1>
   
+
+      </header>
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天总结一下git远程仓库管理：</p>
+<h3 id="1-创建远程仓库"><a href="#1-创建远程仓库" class="headerlink" title="1.创建远程仓库"></a>1.创建远程仓库</h3><p>首先去<a href="https://git.oschina.net/" target="_blank" rel="external">码云</a>上注册一个账号，依次执行创建组织-&gt;创建项目</p>
+<h3 id="2-配置SSH密钥"><a href="#2-配置SSH密钥" class="headerlink" title="2.配置SSH密钥"></a>2.配置SSH密钥</h3><p>一 、<br>设置Git的user name和email：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.name &quot;您的github名字&quot;</div><div class="line">$ git config --global user.email &quot;您的邮箱&quot;</div></pre></td></tr></table></figure></p>
+<p>二、生成SSH密钥过程：<br>1.查看是否已经有了ssh密钥：cd ~/.ssh<br>如果没有密钥则不会有此文件夹，有则备份删除<br>2.生成密钥：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C “haiyan.xu.vip@gmail.com”</div></pre></td></tr></table></figure></p>
+<p>按3个回车，密码为空。</p>
+<p>执行cat ~/.ssh/, 回车之后会看到id_rsa(私钥),id_rsa.pub(公钥),我这里选择公钥,<br>执行cat ~/.ssh/id_rsa.pub,会得到公钥,复制下来,然后回到码云上的项目仓库里添加个人公钥</p>
+<p>在本地新建一个项目文件，进入到文件根目录，执行git clone +您的ssh地址，会生成一个README.md,<br>这个文件可以写说明文档</p>
+<p>项目初始化<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git init</div></pre></td></tr></table></figure></p>
+<p>关联远程仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git remote add arigin 您的项目ssh地址</div></pre></td></tr></table></figure></p>
+<p>拉取远程master代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git pull origin master</div></pre></td></tr></table></figure></p>
+<p>查看当前状态<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git status</div></pre></td></tr></table></figure></p>
+<p>将文件推送到暂存区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git add .</div></pre></td></tr></table></figure></p>
+<p> 把当前的改动做一次提交<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit -am &quot;注释&quot;</div></pre></td></tr></table></figure></p>
+<p>把本地的文件推送到远程仓库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push</div></pre></td></tr></table></figure></p>
+<p>一般开发不在master分支上面，master只读，所以我们新建一个分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b  分支名字     //新建并切换到这个分支上</div></pre></td></tr></table></figure>
+<p>配置.gitignore文件，配置之后，将不会被git追踪到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.DS_Store </div><div class="line">/node_modules/ </div><div class="line">npm_debug.log</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2017/07/07/git远程仓库管理/" class="archive-article-date">
+  	<time datetime="2017-07-07T03:33:59.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-07-07</time>
+</a>
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/14/折角/" class="archive-article-date">
-  	<time datetime="2016-12-14T01:53:57.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/14/折角/">折角</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/14/烟花/" class="archive-article-date">
-  	<time datetime="2016-12-14T01:45:46.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/14/烟花/">烟花</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/06/14/事件代理总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">事件代理总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/14/弹力球/" class="archive-article-date">
-  	<time datetime="2016-12-14T01:30:08.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/14/弹力球/">弹力球</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/13/知识点/" class="archive-article-date">
-  	<time datetime="2016-12-13T08:09:24.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/13/知识点/">知识点</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/10/瀑布流/" class="archive-article-date">
-  	<time datetime="2016-12-10T14:26:27.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/10/瀑布流/">瀑布流</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/09/data/" class="archive-article-date">
-  	<time datetime="2016-12-09T14:14:59.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/09/data/">data</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/09/前端面试题/" class="archive-article-date">
-  	<time datetime="2016-12-09T13:34:53.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/09/前端面试题/">前端面试题</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/05/vue/" class="archive-article-date">
-  	<time datetime="2016-12-05T11:20:25.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/05/vue/">vue</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/22/轮播/" class="archive-article-date">
-  	<time datetime="2016-11-22T15:13:39.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/22/轮播/">轮播</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/18/img加载/" class="archive-article-date">
-  	<time datetime="2016-11-18T14:29:55.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/18/img加载/">img加载</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">Next &raquo;</a>
-    </nav>
-  
-
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="post-git远程仓库管理" data-title="git远程仓库管理" data-url="http://yoursite.com/2017/07/07/git远程仓库管理/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"yinxiaoqiang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
 
       </div>
       <footer id="footer">
@@ -444,8 +250,8 @@
 		mathjax: false,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

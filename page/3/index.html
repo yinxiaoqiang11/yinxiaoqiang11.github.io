@@ -131,6 +131,89 @@
       <div class="body-wrap">
         
   
+    <article id="post-Express" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/16/Express/">Express和Mongodb安装</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Express安装"><a href="#Express安装" class="headerlink" title="Express安装"></a>Express安装</h3><p>首先你是安装了<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>的基础上,在你觉得合适的地方创建一个应用目录,然后进入此目录作为当前目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ mkdir myapp</div><div class="line">$ cd myapp</div><div class="line">$ npm init(此过程会要输入几个参数,我们一般不改,直接回车即可)</div><div class="line">$ npm install express --save</div></pre></td></tr></table></figure></p>
+<p>接下来创建一个应用的骨架<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install express-generator -g</div></pre></td></tr></table></figure></p>
+<p>我们可以创建一个命名为Express的应用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ express -e -c less Express</div><div class="line">$ cd Express</div><div class="line">$ npm install</div></pre></td></tr></table></figure></p>
+<p>启动这个运用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm start</div></pre></td></tr></table></figure></p>
+<p>然后在浏览器中打开 <a href="http://localhost:3000/" target="_blank" rel="external">http://localhost:3000/</a> 网址就可以看到这个应用了</p>
+<h3 id="Mongodb安装"><a href="#Mongodb安装" class="headerlink" title="Mongodb安装"></a>Mongodb安装</h3><p>准备阶段,首先需把我们所要的环境配置好,你们可至<a href="https://github.com/yinxiaoqiang11/mongod" target="_blank" rel="external">我的github账号</a>进行下载到本地<br>然后执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mv -n ~/Downloads/mongodb-osx-x86_64-3.2.9 ~/Applications/mongodb/(注意路径哦,执行此步所下载的文件是看不见的)</div></pre></td></tr></table></figure></p>
+<p>下一步重新打开终端,在根目录下输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sudo mkdir -p /data/db</div><div class="line">$ sudo chown -R  yonghuming /data(注意这里为自己的用户名,用户名后面必须有空格隔开)</div></pre></td></tr></table></figure></p>
+<p>然后再回到根目录下直接执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cd Users/lanou/Applications/mongodb/bin</div></pre></td></tr></table></figure></p>
+<p>您也可以通过终端往下找到此路径的bin文件夹,只不过有点繁琐一些,然后回车执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ./mongod</div></pre></td></tr></table></figure></p>
+<p>下一步打开另一个终端,再次到bin文件下,回车,输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ./mongo</div></pre></td></tr></table></figure></p>
+<h3 id="Mongodb非常实用的命令"><a href="#Mongodb非常实用的命令" class="headerlink" title="Mongodb非常实用的命令"></a>Mongodb非常实用的命令</h3><p>查看所有数据库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ show dbs</div></pre></td></tr></table></figure></p>
+<p>创建数据库,如果已有当前的数据库,会自动切换到当前数据库,如果没有,则会创建一个数据库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ use 数据库名</div></pre></td></tr></table></figure></p>
+<p>查看当前所连接的db<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ db</div></pre></td></tr></table></figure></p>
+<p>删除数据库,进入所要删除的数据库,执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ db.dropDatabase()</div></pre></td></tr></table></figure></p>
+<p>插入数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ db.集合名称.insert(&#123;&#125;)</div></pre></td></tr></table></figure></p>
+<p>更新操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.user.updata(&quot;目标&quot;,&quot;更新内容&quot;)</div></pre></td></tr></table></figure></p>
+<p>查找当前集合下的所有数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.user.find()</div></pre></td></tr></table></figure></p>
+<p>查找当前集合的第一条数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.user.findOne()</div></pre></td></tr></table></figure></p>
+<p>移除目标,此操作会把目标的所有数据删除掉<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.user.remove(&#123;目标&#125;)</div></pre></td></tr></table></figure></p>
+<p>删除集合<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.集合名称.drop()</div></pre></td></tr></table></figure></p>
+<p>drop()和remove()区别<br>    remove用于将集合中的文档删除，但不删除集合本身，也不删除集合的索引。<br>    drop不仅删除集合的文档，也会删除集合本身，同时也会删除在集合上创建的索引。</p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/11/16/Express/" class="archive-article-date">
+  	<time datetime="2016-11-16T01:57:53.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-16</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="post-Express" data-title="Express和Mongodb安装" data-url="undefined"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"yinxiaoqiang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+  
     <article id="post-博客搭建" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
