@@ -1,0 +1,179 @@
+.zhu_container {
+  box-sizing: border-box; }
+  .zhu_container .middle {
+    width: 1301px;
+    padding-top: 17px;
+    overflow: hidden;
+    margin: 0 auto; }
+    .zhu_container .middle .left {
+      float: left;
+      width: 849px;
+      height: 725px;
+      background: #eeeeee;
+      border-radius: 10px;
+      padding-top: 72px;
+      padding-left: 60px;
+      margin-bottom: 34px;
+      box-sizing: border-box; }
+      .zhu_container .middle .left h1 {
+        font-size: 58px;
+        color: #333333;
+        margin-bottom: 20px; }
+      .zhu_container .middle .left p {
+        font-size: 22px;
+        color: #333333;
+        margin-bottom: 19px; }
+      .zhu_container .middle .left .img {
+        width: 730px;
+        height: 485px; }
+        .zhu_container .middle .left .img img {
+          width: 730px;
+          height: 485px; }
+    .zhu_container .middle .right {
+      width: 302px;
+      float: left;
+      height: 725px;
+      padding-left: 70px;
+      margin-bottom: 34px;
+      box-sizing: border-box; }
+      .zhu_container .middle .right h2 {
+        font-size: 50px;
+        margin-bottom: 24px; }
+      .zhu_container .middle .right form .user {
+        margin-left: 12px;
+        margin-bottom: 14px; }
+        .zhu_container .middle .right form .user input {
+          display: block;
+          width: 220px;
+          height: 34px;
+          outline: none;
+          border-radius: 5px;
+          border: 1px solid #999999;
+          color: #999999;
+          padding-left: 14px;
+          box-sizing: border-box; }
+      .zhu_container .middle .right form .button {
+        width: 220px;
+        height: 36px;
+        margin-left: 12px; }
+        .zhu_container .middle .right form .button input {
+          display: block;
+          float: left;
+          width: 54px;
+          background: none;
+          border: 1px solid #cccccc;
+          border-radius: 5px;
+          text-decoration: none;
+          text-align: center;
+          line-height: 36px;
+          color: #333333; }
+        .zhu_container .middle .right form .button input:nth-child(1) {
+          margin-left: 31px; }
+        .zhu_container .middle .right form .button input:nth-child(2) {
+          margin-left: 24px; }
+  .zhu_container .salee {
+    width: 1301px;
+    margin: 0 auto; }
+    .zhu_container .salee .sale {
+      width: 849px;
+      overflow: hidden; }
+      .zhu_container .salee .sale ul {
+        list-style: none; }
+        .zhu_container .salee .sale ul li {
+          width: 262px;
+          height: 389px;
+          border: 1px solid #dddddd;
+          border-radius: 5px;
+          margin-bottom: 19px;
+          float: left; }
+           .zhu_container .salee .sale ul li a{
+              text-decoration: none;
+              color:black; 
+      
+           }
+          .zhu_container .salee .sale ul li a .top {
+            text-align: center;
+            height: 257px;
+            margin-bottom: 31px; }
+            .zhu_container .salee .sale ul li a .top .top1 {
+              height: 257px;
+              text-align: center;
+              background: red; }
+              .zhu_container .salee .sale ul li a .top .top1 img{
+                 height: 257px;
+                 width:262px;
+              }
+          .zhu_container .salee .sale ul li a p {
+            font-size: 28px;
+            padding-left: 16px;
+            box-sizing: border-box;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 13px; }
+          .zhu_container .salee .sale ul li a .bottom {
+            height: 35px; }
+            .zhu_container .salee .sale ul li a .bottom .lefte {
+              float: left;
+              display: block;
+              line-height: 35px;
+              margin-left: 16px;
+              font-size: 13px;
+              color: #333333; }
+              .zhu_container .salee .sale ul li a .bottom  #shopsale{
+                display: block;
+                float:right;
+                width: 78px;
+                height: 35px;
+                border-radius: 5px;
+                background: #5cb85c;
+                text-align: center;
+                line-height: 35px;
+                color: #fff;
+                font-size: 13px;
+                margin-right: 13px;
+                text-decoration: none; }
+        .zhu_container .salee .sale ul li:nth-child(3n+2) {
+          margin-left: 28px;
+          margin-right: 27px; }
+  .zhu_container .page {
+    width: 849px;
+    margin-left: 150px;
+    height: 34px;
+    text-align: center;
+    margin-top: 21px;
+    margin-bottom: 85px; }
+    .zhu_container .page a {
+      display: inline-block;
+      width: 31px;
+      height: 32px;
+      line-height: 34px;
+      text-decoration: none;
+      text-align: center;
+      color: #777777;
+      font-size: 5px;
+      border: 1px solid #dddddd; }
+    .zhu_container .page a:nth-child(1) {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px; }
+    .zhu_container .page a:nth-child(4) {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px; }
+    .zhu_container .page span {
+      display: inline-block;
+      width: 33px;
+      height: 32px;
+      color: #337ab7;
+      text-align: center;
+      line-height: 34px;
+      font-size: 12px;
+      border-top: 1px solid #dddddd;
+      border-bottom: 1px solid #dddddd;
+      position: relative;
+      top: 1px; }
+    .zhu_container .page span:nth-child(2) {
+      background: #337ab7;
+      color: #fff;
+      border-top: 1px solid #337ab7;
+      border-bottom: 1px solid #337ab7; }
+

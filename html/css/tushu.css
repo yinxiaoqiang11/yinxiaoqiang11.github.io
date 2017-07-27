@@ -1,0 +1,88 @@
+.header .header1 {
+  width: 814px;
+  margin: 0 auto; }
+
+#tianjia {
+  color: #fff;
+  background: #080808;
+  display: block; }
+
+#shu {
+  color: #9d9d9d;
+  font-size: 13px;
+  text-decoration: none;
+  background: none; }
+  #shu:hover {
+    background: #080808;
+    color: #fff; }
+
+.tushu {
+  width: 814px;
+  margin: 0 auto;
+  padding-top: 85px;
+  box-sizing: border-box;
+  overflow: hidden; }
+  .tushu h1 {
+    text-align: center;
+    margin-bottom: 25px; }
+  .tushu .book {
+    margin-bottom: 75px; }
+    .tushu .book .shuming {
+      margin-bottom: 13px;
+      padding-right: 100px;
+      box-sizing: border-box;
+      overflow: hidden;
+      width: 814px; }
+      .tushu .book .shuming .left {
+        float: left;
+        width: 64px;
+        height: 36px;
+        margin-right: 36px; }
+        .tushu .book .shuming .left span {
+          float: right;
+          color: #393939;
+          font-size: 14px;
+          position: relative;
+          top: 50%;
+          margin-top: -7px; }
+      .tushu .book .shuming .right {
+        float: left; }
+        .tushu .book .shuming .right input {
+          display: block;
+          width: 614px;
+          height: 36px;
+          outline: none;
+          border-radius: 5px;
+          border: 1px solid #cccccc;
+          color: #999999;
+          padding-left: 14px;
+          box-sizing: border-box; }
+        .tushu .book .shuming .right .right1 {
+          height: 72px;
+          width: 614px;
+          padding-top: 5px;
+          box-sizing: border-box; }
+          .tushu .book .shuming .right .right1 #seclect {
+            height: 16px;
+            width: 58px;
+            border-radius: 5px;
+            border: 1px solid #d8d8d8;
+            margin-bottom: 17px;
+            background: none;
+            outline: none;
+            margin-right: 5px;
+            display: inline-block;
+            padding-left: 0px;
+            line-height: 16px; }
+          .tushu .book .shuming .right .right1 span {
+            color: #333333;
+            font-size: 14px;
+            display: inline; }
+          .tushu .book .shuming .right .right1 #add {
+            display: block;
+            width: 52px;
+            height: 32px;
+            border-radius: 5px;
+            border: 1px solid #d8d8d8;
+            background: #fff;
+            outline: none; }

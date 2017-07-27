@@ -1,0 +1,59 @@
+header .header1 {
+  width: 1294px;
+  margin: 0 auto; }
+
+#gou {
+  color: #fff;
+  background: #080808;
+  display: block; }
+
+#shu {
+  color: #9d9d9d;
+  font-size: 13px;
+  text-decoration: none;
+  background: none; }
+  #shu:hover {
+    background: #080808;
+    color: #fff; }
+
+.shop_main {
+  width: 1298px;
+  margin: 83px auto; }
+  .shop_main h1 {
+    text-align: center;
+    font-size: 41px;
+    margin-bottom: 12px; }
+  .shop_main .shop_bottom {
+    width: 1294px;
+    border: 2px solid #efeae5;
+    box-sizing: border-box;
+    padding: 12px; }
+    .shop_main .shop_bottom table {
+      width: 1268px;
+      margin-bottom: 123px; }
+      .shop_main .shop_bottom table tr {
+        height: 20px;
+        text-align: center; }
+        .shop_main .shop_bottom table tr td img {
+          width: 68px;
+          height: 95px; }
+        .shop_main .shop_bottom table tr td a {
+          text-decoration: none;
+          width: 28px;
+          height: 20px;
+          display: block;
+          background: #c0c0c0;
+          text-align: center;
+          line-height: 20px;
+          color: #565656;
+          margin: 0 auto; }
+        .shop_main .shop_bottom table tr .td1 {
+          width: 487px; }
+        .shop_main .shop_bottom table tr .td2 {
+          width: 206px; }
+      .shop_main .shop_bottom table #head {
+        height: 20px;
+        font-size: 12px; }
+      .shop_main .shop_bottom table #footer {
+        height: 101px;
+        font-size: 12px; }

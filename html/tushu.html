@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>书城</title>
+  <link rel="styleSheet" href="css/header.css">
+  <link rel="styleSheet" href="css/footer.css">
+  <link rel="styleSheet" href="css/tushu.css">
+  <script type="text/javascript" src="jq.js"></script>
+</head>
+<body style="overflow:-Scroll;overflow-x:hidden">
+  <div class="header">
+    <div class="header1">
+      <div class="header2">
+        <h2><a href="#">书吧</a></h2>
+        <ul>
+          <li><a id="shu" href="index.php" class="shouye">网站首页</a></li>
+          <li><a href="#">关于我们</a></li>
+          <li><a id="bookshow" href="tushuzhanshi.php">图书展示</a></li>
+          <li><a href="#">联系我们</a></li>
+          <li><a id="gou" href="shopping.php">购物车</a></li>
+          <li><a id="tianjia" href="tushu.html">添加图书</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="tushu">
+    <h1>添加图书</h1>
+    <div class="book">
+        <div class="shuming">
+        <div class="left"><span>书名:</span></div>
+        <div class="right">
+          <input type="text" placeholder="书名" id="title">
+        </div>
+      </div>
+      <div class="shuming">
+        <div class="left"><span>简介:</span></div>
+        <div class="right">
+          <input type="text" placeholder="简介" id="intruduce">
+        </div>
+      </div>
+      <div class="shuming">
+        <div class="left"><span>作者:</span></div>
+        <div class="right">
+          <input type="text" placeholder="作者" id="author">
+        </div>
+      </div>
+      <div class="shuming">
+        <div class="left"><span>出版社:</span></div>
+        <div class="right">
+          <input type="text" placeholder="出版社" id="publish">
+        </div>
+      </div>
+      <div class="shuming">
+        <div class="left"><span>出版日期:</span></div>
+        <div class="right">
+          <input type="text" placeholder="出版日期" id="datetim" >
+        </div>
+      </div>
+      <div class="shuming">
+        <div class="left"><span>价格:</span></div>
+        <div class="right">
+          <input type="text" placeholder="价格" id="price">
+        </div>
+      </div>
+      <div class="shuming">
+        <div class="left"><span>ISBN:</span></div>
+        <div class="right">
+          <input type="text" placeholder="ISBN" id="ISBN" >
+        </div>
+      </div>
+      <div class="shuming">
+        <div class="left"><span>书籍图片:</span></div>
+        <div class="right">
+          <div class="right1">
+            <input type="file" id="seclect" value="选择文件"><br>
+            <button type="button" onclick="sub()" id="add" value="添加">添加</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer_top"><a href="#">免费条款</a><a href="#">隐私保护</a><a href="#">咨询热点</a><a href="#">联系我们</a><a href="#">公司简介</a><a href="#">批发方案</a><a href="#">配送方式</a></div><span>&copy;2016-2999 &nbsp;SSS版权所有，并保留所有权利 	</span>
+  </div>
+</body>
+
+<script type="text/javascript" src="index.js"></script>
+
+
+
+
+
+
+
+
+</html>

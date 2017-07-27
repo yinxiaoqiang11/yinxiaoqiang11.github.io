@@ -1,0 +1,93 @@
+.header .header1 {
+  width: 1173px;
+  margin: 0 auto; }
+
+#bookshow {
+  color: #fff;
+  background: #080808;
+  display: block; }
+
+#shu {
+  color: #9d9d9d;
+  font-size: 13px;
+  text-decoration: none;
+  background: none; }
+  #shu:hover {
+    background: #080808;
+    color: #fff; }
+
+.main {
+  overflow: hidden;
+  width: 1173px;
+  margin: 0 auto; }
+  .main .left {
+    width: 516px;
+    height: 653px;
+    background: red;
+    float: left; }
+    .main .left img{
+      width: 516px;
+      height: 653px;
+    }
+  .main .right {
+    float: right;
+    width: 575px;
+    padding-right: 15px;
+    box-sizing: border-box; }
+    .main .right h1 {
+      font-size: 27px;
+      color: #323232;
+      padding-top: 5px;
+      margin-bottom: 18px; }
+    .main .right p {
+      color: #646464;
+      text-indent: 50px;
+      line-height: 25px;
+      margin-bottom: 25px; }
+    .main .right .right_bottom {
+      border-top: 1px solid #eeeeee;
+      padding-top: 19px;
+      margin-bottom: 65px; }
+      .main .right .right_bottom .right_t {
+        height: 161px;
+        width: 575px;
+        background: #ebebeb; }
+        .main .right .right_bottom .right_t span {
+          font-size: 14px;
+          color: #878787;
+          display: block;
+          line-height: 34px; }
+          .main .right .right_bottom .right_t span a {
+            text-decoration: none;
+            color: #337ab7;
+            margin-left: 10px; }
+        .main .right .right_bottom .right_t div {
+          color: #878787; }
+          .main .right .right_bottom .right_t div a {
+            color: #ff2832;
+            font-size: 21px;
+            text-decoration: none; }
+    .main .right .right_footer {
+      width: 433px;
+      height: 39px; }
+      .main .right .right_footer a {
+        display: block;
+        line-height: 39px;
+        font-size: 15px;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 5px; }
+      .main .right .right_footer #che {
+        width: 110px;
+        height: 39px;
+        float: left;
+        background: #ff2832;
+        color: #fff;
+        margin-left: 12px; }
+      .main .right .right_footer #lijigouwu {
+        width: 97px;
+        height: 39px;
+        float: right;
+        color: #ff424b;
+        border: 2px solid #ff2832;
+        background: #ffedee; }
