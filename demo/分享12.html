@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>鼠标拖放</title>
+		<style type="text/css">
+			.div1{
+				width: 300px;
+				height: 300px;
+				background-color: blue;
+				text-align: center;
+				line-height: 300px;
+				font-size:50px;
+				color: white;  
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1">追我呀</div>
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+			var drag=document.querySelector(".div1");
+			drag.onmousedown=function(){
+				var oEvent=event||window.event;
+				var x=oEvent.clientX-this.offsetLeft;
+				var y=oEvent.clientY-this.offsetTop;
+				drag.style.position="absolute";
+				document.onmousemove=function(){
+					var oEvent=event||window.event;
+					var x1=oEvent.clientX;
+					var y1=oEvent.clientY;
+					drag.style.left=x1-x+"px";
+					drag.style.top=y1-y+"px";
+
+				}
+			}
+			document.onmouseup=function(){
+				document.onmousemove=null;
+			}
+
+
+		}
+	</script>
+</html>

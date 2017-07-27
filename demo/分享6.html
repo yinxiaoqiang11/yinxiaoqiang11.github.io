@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style type="text/css">
+			h2{
+				position: absolute;
+				left: 220px;
+				top: 125px;
+				font-size: 40px;
+			}
+			input{
+				position: absolute;
+				top:300px;
+				font-size: 60px; 
+			}
+			input:nth-child(2){
+				left:285px; 
+			}
+			input:nth-child(3){
+				left:300px; 
+			}
+			
+
+		</style>
+	</head>
+	<body>
+		<h2>今天我分享的好不?</h2>
+		<input type="button" value="还行吧" id="btn1">
+			<input type="button" value="不咋滴" id="btn2">
+			
+
+	<script>
+		var a="";
+		function $(x){
+			return document.querySelector(x);
+		}
+		var btn1=$("#btn1");
+		var btn2=$("#btn2");
+		btn1.onclick=function(){
+			alert("谢谢");
+		}
+		btn2.onmouseover=function(){
+			fn();
+		}
+		function fn(){
+			var j=a*100;
+			btn2.style.marginLeft=j+'px';
+			a++;
+		}
+
+		
+
+
+
+	</script>
+
+
+
+		
+	</body>
+</html>

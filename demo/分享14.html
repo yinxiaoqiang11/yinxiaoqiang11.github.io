@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		#warp{
+			width:215px;
+			height:200px;
+			border:1px solid #666;
+			position: relative;
+			margin-top:10px;
+			overflow: auto;
+		}
+		ul{
+			list-style: none;
+		}
+		li{
+			width:50px;
+			height:30px;
+			float:left;
+			margin:5px 2px 5px 11px;
+			background-color: #cfc;
+			text-align: center;
+			line-height: 30px;
+		}
+		#tishi{
+			width:100%;
+			height:0;
+			overflow: hidden;
+		}
+		.yes1{
+			background-color: red;			
+		}
+		.yes2{
+			background-color: yellow;
+		}
+		.yes3{
+			background-color: purple;			
+		}
+		.yes4{
+			background-color: gold;			
+		}
+		.yes5{
+			background-color:green;			
+		}
+	</style>
+</head>
+<body>
+	<input type="text" placeholder="请输入要查询的内容">
+	<button>查询</button>
+	<div id="warp">
+		<div id="tishi">输入的内容有误，请确认</div>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li>
+			<li>13</li>
+			<li>14</li>
+			<li>15</li>
+			<li>16</li>
+			<li>17</li>
+			<li>18</li>
+			<li>19</li>
+			<li>20</li>
+			<li>21</li>
+			<li>22</li>
+			<li>23</li>
+			<li>24</li>
+			<li>25</li>
+			<li>26</li>
+			<li>27</li>
+			<li>28</li>
+			<li>29</li>
+			<li>30</li>
+		</ul>
+	</div>
+	<script>
+		var btn=document.querySelector("button");
+		var li=document.querySelectorAll("li");
+		var warp=document.querySelector("#warp");
+		var tishi=document.querySelector("#tishi");
+
+		btn.onclick=function(){
+			init();
+			var txt=document.querySelector("input").value;
+			var i=0;
+			btn.timer=setInterval(function(){
+				if(i==li.length){
+					clearInterval(btn.timer);
+					tishi.style.height="100%";
+					warp.scrollTop=0;
+				}
+				if(li[i].innerHTML!=txt){
+					li[i].className="no";
+					warp.scrollTop=li[i].offsetTop*0.7;
+				}
+				else{
+					libg(li[i]);
+					clearInterval(btn.timer);
+				}
+				i++;
+			},100);
+		}
+		function libg(warp){
+			var bg=["yes1","yes2","yes3","yes4","yes5"];
+			var i=0;
+			warp.timer=setInterval(function(){
+				if(i==bg.length-1){
+					clearInterval(warp.timer);
+				}
+				warp.className=bg[i];
+				i++;
+			},150)
+		}
+		function init(){
+			for(var i=0;i<li.length;i++){
+				li[i].className="";
+			}
+			tishi.style.height=0;
+		}
+	</script>
+	
+</body>
+</html>

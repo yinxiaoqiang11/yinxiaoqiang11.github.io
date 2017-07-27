@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset=UTF-8 />
+<title>recursion</title>
+<style type="text/css">
+	div{
+		float: left;
+		border:10px solid black;
+		width:100px;
+        height:100px;
+       display: none;
+       text-align: center;
+    		line-height: 100px;
+    		font-size: 32px;
+	}
+</style>
+<script type="text/javascript">
+    var interval = null, index = 0;
+ //这是第一部分 用JS在html中建100个div 并且把他们隐藏
+    window.onload = function ()
+    {
+        for ( var i = 0; i < 100; i++)
+        {
+            var div = document.createElement ('div');;
+            var txt = document.createTextNode(i + 1);
+            div.appendChild(txt);
+            document.body.appendChild (div);
+        }
+        
+ //这是第二部分   利用颜色是由16个数字中的6个随机数组成的  建立一个6个随机数字的数组  然后在他们前面加一个#就组成了颜色      
+        
+			        function getcl(){
+			 var arr = []//定义一个空的数组
+			 i =0;//为while循环定义i的初始值
+			 C = '0123456789ABCDEF';
+			 //定义颜色代码的字符串
+			 while(i++ < 6){//循环6次
+			 x=Math.random()*16;
+			 //取0-16之间的随机数给变量x
+			 b=parseInt(x);//取0-16之前的整数给变量b
+			 c=C.substr(b,1);
+			 //由第b（0-16之间的整数）位开始取一个字符
+			 arr.push(c);
+			 //通过6次循环得到的随机位置取得的字符组合在一起把值给到arr这个数组
+			 }
+			 var cl = "#"+ arr.join('');
+			 //去掉之前数组之间的逗号，前面再加一个井号，
+			 //这样颜色随机的颜色代码就生成了，并且把颜色代码赋值给变量cl
+			 return cl;//把cl的值返回给函数getcl()
+			 }
+// 这是第三部分 利用定时器让100个div逐个显示出来  并且给每个div加随机颜色   
+		 var div = document.getElementsByTagName ('div');        
+        interval = setInterval (function ()		
+        { 		index++;
+         	div[index-1].style.display = 'block';		//div逐个显示
+            div[index-1].style.backgroundColor=getcl();	//给每个显示的div一个随机颜色
+            if (index == div.length)
+            {
+                clearInterval(interval);
+                interval = null;
+                return false;
+            }
+        }, 100);
+    }
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>流动</title>
+	<style>
+		div{
+			width:50px;
+			height:50px;
+			position: absolute;
+			border-radius: 50%;
+			top:0px;
+			left:0px;
+		}
+	</style>
+</head>
+<body>
+	<div style="background:red"></div>
+	<div style="background:yellow"></div>
+	<div style="background:purple"></div>
+	<div style="background:green"></div>
+	<div style="background:red"></div>
+	<div style="background:gold"></div>
+	<div style="background:red"></div>
+	<div style="background:yellow"></div>
+	<div style="background:purple"></div>
+	<div style="background:green"></div>
+	<div style="background:red"></div>
+	<div style="background:gold"></div>
+	<div style="background:red"></div>
+	<div style="background:yellow"></div>
+	<div style="background:purple"></div>
+	<div style="background:green"></div>
+	<div style="background:red"></div>
+	<div style="background:gold"></div>
+	<div style="background:red"></div>
+	<div style="background:yellow"></div>
+	<div style="background:purple"></div>
+	<div style="background:green"></div>
+	<div style="background:red"></div>
+	<div style="background:gold"></div>
+	
+</body>
+<script>
+	window.onload=function(){
+		document.onmousemove=function(event){
+			var oEvent=event||window.event;
+			var div=document.querySelectorAll("div");
+			for(var i=div.length-1;i>0;i--){
+				div[i].style.left=div[i-1].offsetLeft+"px";
+				div[i].style.top=div[i-1].offsetTop+"px";
+
+			};
+			div[0].style.left=oEvent.clientX+"px";
+			div[0].style.top=oEvent.clientY+"px";
+
+		}
+		var timer=setInterval(function(){
+			var div=document.querySelectorAll("div");
+			for(var i=div.length-1;i>0;i--){
+				div[i].style.left=div[i-1].offsetLeft+"px";
+				div[i].style.top=div[i-1].offsetTop+"px";
+
+			}
+		},40)
+	}
+</script>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>倒计时</title>
+	<style type="text/css">
+	    .box{
+	    	width: 800px;
+	    	margin: 0 auto;
+
+	    }
+	    .first{
+	    	position: relative;
+	    }
+		.head{
+			width: 200px;
+			height: 100px;
+			font-size: 50px;
+			text-align: center;
+			line-height: 100px;
+			color: white;
+			margin: 0 auto;
+			background-color: orange;
+		    border-radius: 50%;
+		}
+		.boo1{
+			margin: 10px 40%;
+			width: 80px;
+			position: absolute;
+			left: -150px;
+			top: 30px;			
+		}
+		.boo2{			
+			width: 80px;
+			position: absolute;
+			left: 520px;
+			top:40px;
+		}
+		.title{
+			font-size: 30px;
+			width: 50px;
+			margin-left: 530px;
+		}
+		#happy{
+			margin: 0 auto;
+			width: 500px;
+			height: 200px;
+			background-color: lightgreen;
+			color: white;
+			font-size: 50px;
+		}
+		.box{
+			border:1px black solid;
+			background-color: lightblue;
+		}
+		.ah{
+			float: left;
+			width: 100px;
+			height:200px;
+			font-size: 60px;
+			line-height: 200px;
+			color: white;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+<div class="box">
+	<div class="first">
+		<input type="button" name="" value="start" class="btn btn-default boo1">
+		<input type="button" name="" value="stop" class="btn btn-default boo2">
+	</div>
+	<div class="head">倒计时</div>
+	
+	<div class="title">5minutes</div>
+	<div id="happy">
+		<div class="ah">00</div>
+		<div class="ah">:</div>
+		<div class="ah" id="fen">00</div>
+		<div class="ah">:</div>
+		<div class="ah" id="miao">00</div>
+	</div>
+</div>
+<script type="text/javascript">
+  var onetime=300000;
+  var timer;
+  var inputs=document.getElementsByTagName("input");
+  //定义一个转换函数，进行毫秒到00：00：00格式的转换
+  function change(){ 	
+    	//将onetime转换为分钟
+	   var min1=Math.floor(onetime/1000/60%60);
+	   //将一部分转换为秒
+	   var secs=Math.floor(onetime/1000%60);
+	   //将分钟写入页面中的分钟位置
+	   document.getElementById("fen").innerHTML=min1;
+	   //将秒数写入页面的秒数位置
+	   document.getElementById("miao").innerHTML=secs; 
+  }
+  change();
+  function ttime(){
+  	        //让每次的onetime都赋一个新值
+  	        onetime=onetime-1000;
+  	        //循环中onetime的值要>=0
+  	        if (onetime>-1){
+  	        	change(); 	              
+  	        }  	        
+  	        else{
+  	        	//当不符合时进行清空计时
+  	        	clearTimeout(timer);
+  	        }
+  	        console.log(onetime)
+  	 }
+  	 function chufa(){
+  	 //设置计时器，1秒执行一次
+  	 timer=setInterval(ttime,1000);
+  	 } 
+  	 //点击stop按钮时清空计时，停止倒计时	
+  	 inputs[1].onclick=function(){
+			clearInterval(timer);	
+	 }
+	 //点击start按钮时继续执行ttime
+	inputs[0].onclick=function(){
+	clearInterval(timer);
+	timer=setInterval(ttime,1000);	
+	}
+	</script>
+</body>
+</html>

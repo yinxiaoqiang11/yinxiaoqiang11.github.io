@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>折叠字体</title>
+	<style type="text/css">
+		body{
+			background-color: #468da3;
+		}
+		p{
+			text-align: center;
+			margin: 100px auto 0;
+		}
+		span{
+			font-size: 8em;
+			color: #fff;
+			position: relative;
+		}
+		span::after{
+			position: absolute;
+			left:0px;
+			top: 0px;
+			content: attr(text);
+			color: #468da3;
+			text-shadow: -1px 0 1px #468da3,1px 0 1px rgba(0,0,0,.8);
+			transform-origin: left;
+			transition: all .5s;
+			transform: rotateY(-40deg);
+			transform:skew(0,20deg) scale(1.1,1); 
+		}
+		span:hover::after{
+			transform: rotateY(-10deg);
+		}
+		span:hover::before{
+			transform: scale(1.1,1) skew(0,5deg);
+		}
+	</style>
+</head>
+<body>
+ <p>
+ 	<span text="3">3</span>
+ 	<span text="d">d</span>
+
+ </p>
+	
+</body>
+</html>

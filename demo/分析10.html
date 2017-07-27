@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style type="text/css">
+			.loading{
+				width: 120px;
+				height: 50px;
+				position: fixed;
+				top: 45%;
+				left: 50%;
+			}
+			.div1{
+				width: 0px;
+				height: 0px;
+				border-right:25px solid transparent;
+				border-left: 25px solid red;
+				border-bottom: 25px solid red;
+				border-top:25px solid red;
+				border-radius: 25px; 
+				animation: up 0.5s 0s infinite;
+			}
+			.div2{
+				width: 0px;
+				height: 0px;
+				border-right:25px solid transparent;
+				border-left: 25px solid red;
+				border-bottom: 25px solid red;
+				border-top:25px solid red;
+				border-radius: 25px; 
+				margin-top: -50px;
+				animation: down 0.5s 0s infinite;
+
+
+			}
+			.div3,.div4,.div5{
+				position: absolute;
+				top: 25px;
+				left:100px;;
+				width: 10px;
+				height: 10px;
+				border-radius:5px;
+				background-color: red;
+				transform:translate(0,-6.25px); 
+			}
+			.div3{
+				animation:balls 1s 0.33s infinite linear;
+
+			}
+			.div4{
+				animation:balls 1s 0.66s infinite linear;
+
+			}
+			.div5{
+				animation:balls 1s 0.99s infinite linear;
+
+			}
+			@keyframes balls{
+				75%{
+					opacity: 0.7;
+
+				}
+				100%{
+					transform: translate(-100px,-6.25px);
+				}
+			}
+			@keyframes up{
+				0%{
+					transform:rotate(270deg);
+				}
+				50%{
+					transform: rotate(360deg);
+				}
+				100%{
+					transform: rotate(270deg);
+				}
+			}
+			@keyframes down{
+				0%{
+					transform:rotate(90deg);
+				}
+				50%{
+					transform: rotate(0deg);
+				}
+				100%{
+					transform: rotate(90deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="loading">
+			<div class="div1"></div>
+			<div class="div2"></div>
+			<div class="div3"></div>
+			<div class="div4"></div>
+			<div class="div5"></div>		
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>duisgf</title>
+<meta charset="utf-8">
+<style type="text/css">
+#image{
+position: relative;
+left: 0px;
+top: 0px;
+}
+</style>
+</head>
+<body>
+<div>
+<img src="https://img.alicdn.com/tps/TB1jQuQLpXXXXcTXpXXXXXXXXXX-520-280.jpg" id="image">
+</div>
+<script type="text/javascript">
+var img = document.getElementById("image");
+// Event 对象代表事件的状态，比如事件在其中发生的元素、键盘按键的状态、鼠标的位置、鼠标按钮的状态。
+// 事件通常与函数结合使用，函数不会在事件发生前被执行
+document.onclick = function(event){
+	// 标准化事件对象
+var event = event || window.event;
+//  target 属性规定在何处打开链接文档。
+// offsetwidth:是元素相对父元素的偏移宽度
+targetX =event.clientX - img.offsetWidth/2;
+targetY = event.clientY - img.offsetHeight/2;
+}
+var leaderX=0;
+leaderY=0;
+targetX=0;
+targetY=0;
+// setInterval() 方法可按照指定的周期（以毫秒计）来调用函数或计算表达式
+// setInterval(function,interval[,arg1,arg2,......argn])
+// setInterval(object,methodName,interval[,arg1,arg2,.....argn])
+// 第一种格式是标准动作面板中setInterval函数的默认语法，第二种格式是在专家模式动作中使用的方法
+setInterval(function(){
+leaderX = leaderX + (targetX - leaderX)/10;
+leaderY = leaderY + (targetY - leaderY)/10;
+// left 属性设置定位元素左外边距边界与其包含块左边界之间的偏移。
+img.style.left = leaderX+"px";
+img.style.top = leaderY +"px";
+},10)
+</script>
+</body>
+</html>

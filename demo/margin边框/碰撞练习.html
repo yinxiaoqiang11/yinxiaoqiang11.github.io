@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pengzhuang</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.div1{
+			width: 80%;
+			box-sizing: border-box;
+			border: 1px yellow solid;
+			position: relative;
+			margin: 100px auto;
+		}
+		.div2{
+			width: 15%;
+			box-sizing: border-box;
+			border: 5px pink solid;
+			background-color: purple;
+			position: relative;
+		}
+		.div3{
+			margin: 100%;
+		}
+		.div4{
+			margin: 60%;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="div1">
+		<div class="div2">
+			<div class="div3"></div>
+		</div>
+		<div class="div4"></div>
+	</div>
+</body>
+	<script type="text/javascript">
+		var div1=document.getElementsByClassName('div1')[0];
+		var div2=document.getElementsByClassName('div2')[0];
+		// var maxWidth=div1.clientWidth-div2.offsetWidth;
+		// var maxHeight=div1.clientHeight-div2.offsetHeight;
+		var speed=4;
+		var x=true;
+		var y=true;
+		var timer=null;
+		timer=setInterval(function(){
+			var maxWidth=div1.clientWidth-div2.offsetWidth;
+			var maxHeight=div1.clientHeight-div2.offsetHeight;
+			var l=div2.offsetLeft;
+			var t=div2.offsetTop;
+			if (x) {
+				l+=speed;
+				if (l>=maxWidth) {
+					x=false;
+				}
+			}else{
+				l-=speed;
+				if (l<=0) {
+					x=true;
+				}
+			}
+			if (y) {
+				t+=speed;
+				if (t>=maxHeight) {
+					y=false;
+				}
+			}
+			else{
+				t=t-speed;
+				if (t<=0){
+					y=true;
+				}
+			}
+			div2.style.left=l+'px';
+			div2.style.top=t+'px';
+		},2)
+	</script>
+</html>
